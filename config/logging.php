@@ -47,6 +47,16 @@ return [
             'level' => env('LOG_LEVEL', 'debug'),
         ],
 
+        'console' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/console.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+        ],
+        'coupons' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/coupons.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+        ],
         'daily' => [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),

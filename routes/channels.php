@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Broadcast;
 //     return (int) $user->id === (int) $id;
 // });
 //队伍战况
-Broadcast::channel('teams', function () {
-	return true;
+Broadcast::channel('teams', function ($teams) {
+	return $teams;
 });

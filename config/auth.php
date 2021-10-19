@@ -44,6 +44,11 @@ return [
             'driver' => 'jwt',
             'provider' => 'users',
         ],
+        
+        'alix-cms' => [
+            'driver' => 'session',
+            'provider' => 'administrators',
+        ],
     ],
 
     /*
@@ -69,6 +74,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
+        'administrators' => [
+            'driver' => 'eloquent',
+            'model' => Alix\Cms\Models\Administrator::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

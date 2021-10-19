@@ -1,0 +1,36 @@
+{
+    "name": "alix/cms",
+    "description": "CMS for laravel 7+",
+    "keywords": [
+        "aliyun",
+        "oss",
+        "laravel",
+        "filesystems",
+        "storage"
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "ckfinder/ckfinder-laravel-package": "v3.5.1.5",
+        "laravel-ui":"~2.0"
+    },
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Alex Wang",
+            "email": "wanga503@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Alix\\Cms\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alix\\Cms\\Providers\\AppServiceProvider"
+            ]
+        }
+    }
+}

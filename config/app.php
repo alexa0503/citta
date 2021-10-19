@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Shanghai',
 
     /*
     |--------------------------------------------------------------------------
@@ -174,7 +174,9 @@ return [
         App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        Alix\Cms\Providers\AppServiceProvider::class,
+        Alix\Cms\Providers\AuthServiceProvider::class,
+        // Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     ],
 
     /*
