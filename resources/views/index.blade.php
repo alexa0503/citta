@@ -126,7 +126,7 @@
         <div class="menus">
             <ul id="menus">
                 <li data-menuanchor="home" class="active"><a href="#home">{{__("首页")}}</a></li>
-                <li><a href="#">{{__("关于臻逸")}}</a>
+                {{-- <li><a href="#">{{__("关于臻逸")}}</a>
                     <ul>
                         <li data-menuanchor="aboutcitta1"><a href="#aboutcitta1">{{__("品牌概念")}}</a></li>
                         <li data-menuanchor="aboutcitta2"><a href="#aboutcitta2">{{__("品牌创建")}}</a></li>
@@ -140,7 +140,10 @@
                         <li data-menuanchor="aboutkwah4"><a href="#aboutkwah4">{{__("物业服务")}}</a></li>
                         <li data-menuanchor="aboutkwah5"><a href="#aboutkwah5">{{__("关于我们")}}</a></li>
                     </ul>
-                </li>
+                </li> --}}
+                <li data-menuanchor="aboutcitta1"><a href="#aboutcitta1">{{__("关于臻逸")}}</a></li>
+                <li data-menuanchor="aboutkwah1"><a href="#aboutkwah1">{{__("关于嘉华")}}</a></li>
+                <li data-menuanchor="projects"><a href="#projects">{{__("精彩项目")}}</a></li>
                 <li data-menuanchor="contactus"><a href="#contactus">{{__("联系我们")}}</a></li>
             </ul>
         </div>
