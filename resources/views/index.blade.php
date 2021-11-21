@@ -24,6 +24,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1.0,initial-scale=1,user-scalable=no,viewport-fit=true" />
+    <link rel="shortcut icon" href="/favicon.ico"/>
     <link rel="stylesheet" href="{{asset('css/fullpage.min.css')}}">
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <script src="{{asset('js/easings.min.js')}}"></script>
@@ -108,41 +109,41 @@
         @endif
 
         function resizePage() {
-            const height = $(".fp-tableCell").height();
-            const width = $(".fp-tableCell").width();
-            let left = 0;
-            let width1 = 0;
-            if (width / height > 1920 / 1080) {
-                width1 = height * (1920 / 1080);
-                left = ($("#container").width() - width1) / 2;
-                // $(".page").width(height * (1920 / 1080));
-            } else {
-                width1 = width;
-                left = 0;
-            }
-            $("#header").css({
-                left: left + "px"
-            });
-            $("#header").width(width1);
-            $("#menuWrapper").width(width1);
-            $("#menuWrapper").css({
-                left: left + "px"
-            });
-            $("#menu").css({
-                right: left + "px"
-            });
-            $(".fp-controlArrow.fp-next").css({
-                right: (left + 140) + "px"
-            });
-            $(".fp-controlArrow.fp-prev").css({
-                left: (left + 140) + "px"
-            });
-            $(".arrowBottom").css({
-                left: (left + 140) + "px"
-            });
+            // const height = $(".fp-tableCell").height();
+            // const width = $(".fp-tableCell").width();
+            // let left = 0;
+            // let width1 = 0;
+            // if (width / height > 1920 / 1080) {
+            //     width1 = height * (1920 / 1080);
+            //     left = ($("#container").width() - width1) / 2;
+            //     // $(".page").width(height * (1920 / 1080));
+            // } else {
+            //     width1 = width;
+            //     left = 0;
+            // }
+            // $("#header").css({
+            //     left: left + "px"
+            // });
+            // $("#header").width(width1);
+            // $("#menuWrapper").width(width1);
+            // $("#menuWrapper").css({
+            //     left: left + "px"
+            // });
+            // $("#menu").css({
+            //     right: left + "px"
+            // });
+            // $(".fp-controlArrow.fp-next").css({
+            //     right: (left + 140) + "px"
+            // });
+            // $(".fp-controlArrow.fp-prev").css({
+            //     left: (left + 140) + "px"
+            // });
+            // $(".arrowBottom").css({
+            //     left: (left + 140) + "px"
+            // });
         }
         $().ready(function() {
-            resizePage();
+            // resizePage();
             $("#menu .close").click(() => {
                 $("#menu").addClass("hidden");
                 $("#menuWrapper").addClass("hidden");
@@ -185,7 +186,7 @@
             , slidesNavPosition: 'bottom'
             , loopHorizontal: false
             , afterResize: function(width, height) {
-                resizePage();
+                // resizePage();
             }
             , afterLoad: function(origin, destination, direction) {
                 if (destination.anchor == 'contactus') {
