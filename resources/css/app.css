@@ -42,18 +42,22 @@ a {
     color: #104a54;
     text-align: center;
     width: 256px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
-#menu .languages span {
+#menu .languages a {
     border-right: 1px solid #104a54;
     display: inline-block;
     padding: 0 10px;
     height: 24px;
+    color: #104a54;
     line-height: 24px;
 }
-#menu .languages span:last-child {
+#menu .languages a:last-child {
     border-right: none;
 }
-#menu .languages span.active {
+#menu .languages a.active {
     color: white;
 }
 #menu .close {
@@ -100,7 +104,7 @@ a {
     margin: 0 0 50px 90px;
 }
 #menu .footer img {
-    width: 230px;
+    max-width: 230px;
 }
 #menuWrapper {
     top: 0;

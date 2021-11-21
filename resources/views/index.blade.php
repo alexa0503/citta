@@ -34,77 +34,19 @@
 
 <body>
     <div id="container">
-        <div class="section active" data-anchor="home">
+        @foreach($pages as $key => $images)
+        <div class="section {{$key === 0 ? 'active':''}}" data-anchor="{{$key}}">
+            @if(count($images) === 1)
+            <div class="page" style="background-image: url({{$images[0]}})"></div>
+            @else
+            @foreach($images as $k => $image)
             <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/1-1.jpg')}})"></div>
+                <div class="page" style="background-image: url({{$image}})"></div>
             </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/1-2.jpg')}})"></div>
-            </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/1-3.jpg')}})"></div>
-            </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/1-4.jpg')}})"></div>
-            </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/1-5.jpg')}})"></div>
-            </div>
+            @endforeach
+            @endif
         </div>
-        <div class="section" data-anchor="aboutcitta1">
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/2-1.jpg')}})"></div>
-            </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/2-2.jpg')}})"></div>
-            </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/2-3.jpg')}})"></div>
-            </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/2-4.jpg')}})"></div>
-            </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/2-5.jpg')}})"></div>
-            </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/2-6.jpg')}})"></div>
-            </div>
-        </div>
-        <div class="section" data-anchor="aboutcitta2">
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/3-1.jpg')}})"></div>
-            </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/3-2.jpg')}})"></div>
-            </div>
-        </div>
-        <div class="section" data-anchor="aboutkwah1">
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/4-1.jpg')}})"></div>
-            </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/4-2.jpg')}})"></div>
-            </div>
-            <div class="slide">
-                <div class="page" style="background-image: url({{asset('/images/pages/4-3.jpg')}})"></div>
-            </div>
-        </div>
-        <div class="section" data-anchor="aboutkwah2">
-            <div class="page" style="background-image: url({{asset('/images/pages/5-1.jpg')}})"></div>
-        </div>
-        <div class="section" data-anchor="aboutkwah3">
-            <div class="page" style="background-image: url({{asset('/images/pages/5-2.jpg')}})"></div>
-        </div>
-        <div class="section" data-anchor="aboutkwah4">
-            <div class="page" style="background-image: url({{asset('/images/pages/5-3.jpg')}})"></div>
-        </div>
-        <div class="section" data-anchor="aboutkwah5">
-            <div class="page" style="background-image: url({{asset('/images/pages/5-4.jpg')}})"></div>
-        </div>
-        <div class="section" data-anchor="contactus">
-            <div class="page" style="background-image: url({{asset('/images/pages/6-1.jpg')}})"></div>
-        </div>
+        @endforeach
     </div>
     <div id="header">
         <div id="logo">
@@ -117,7 +59,9 @@
     <div id="menu" class="hidden">
         <div class="header">
             <div class="languages">
-                <span class="active">中</span><span>繁</span><span>Eng</span>
+                @foreach($languages as $key => $value)
+                <a href="/?lang={{$key}}" {{App::currentLocale() === $key?'class=active':''}}>{{$value}}</a>
+                @endforeach
             </div>
             <div class="close">
                 <img src="{{asset('images/icon-close.png')}}" alt="close" />
@@ -127,10 +71,10 @@
             <ul id="menus">
                 <li data-menuanchor="home" class="active"><a href="#home">{{__("首页")}}</a></li>
                 {{-- <li><a href="#">{{__("关于臻逸")}}</a>
-                    <ul>
-                        <li data-menuanchor="aboutcitta1"><a href="#aboutcitta1">{{__("品牌概念")}}</a></li>
-                        <li data-menuanchor="aboutcitta2"><a href="#aboutcitta2">{{__("品牌创建")}}</a></li>
-                    </ul>
+                <ul>
+                    <li data-menuanchor="aboutcitta1"><a href="#aboutcitta1">{{__("品牌概念")}}</a></li>
+                    <li data-menuanchor="aboutcitta2"><a href="#aboutcitta2">{{__("品牌创建")}}</a></li>
+                </ul>
                 </li>
                 <li><a href="#">{{__("关于嘉华")}}</a>
                     <ul>
@@ -148,17 +92,21 @@
             </ul>
         </div>
         <div class="footer">
-            <a href="" download=""><img src="{{asset('images/icon-download.png')}}" alt="download" /></a>
+            <a href="" download=""><img src="{{asset('images/'.app()->currentLocale().'/icon-download.png')}}" alt="download" /></a>
         </div>
     </div>
     <div id="menuWrapper" class="hidden"></div>
     <div class="arrowBottom">
-        <img src="{{asset('images/icon-arrow-down.png')}}" alt="next" />
+        <img id="arrowDown" src="{{asset('images/icon-arrow-down.png')}}" alt="next" />
+        <img id="arrowUp" src="{{asset('images/icon-arrow-up.png')}}" alt="prev" class="hidden" />
     </div>
     <script>
+        @if(env('APP_ENV') === 'production')
         window.oncontextmenu = function(e) {
             e.preventDefault();
         }
+        @endif
+
         function resizePage() {
             const height = $(".fp-tableCell").height();
             const width = $(".fp-tableCell").width();
@@ -235,14 +183,22 @@
             , showActiveTooltip: false
             , slidesNavigation: true
             , slidesNavPosition: 'bottom'
+            , loopHorizontal: false
             , afterResize: function(width, height) {
                 resizePage();
+            }
+            , afterLoad: function(origin, destination, direction) {
+                if (destination.anchor == 'contactus') {
+                    $("#arrowDown").addClass("hidden");
+                    $("#arrowUp").removeClass("hidden");
+                } else {
+                    $("#arrowDown").removeClass("hidden");
+                    $("#arrowUp").addClass("hidden");
+                }
             },
             //Scrolling
             css3: true
         , });
-        //methods
-        // fullpage_api.setAllowScrolling(false);
 
     </script>
 </body>
