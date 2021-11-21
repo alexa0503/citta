@@ -55,7 +55,7 @@ class SettingController extends Controller
     {
         $validator = \Validator::make($request->all(), [
             'name' => 'required',
-            'title' => 'required',
+            'body' => 'required',
         ]);
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()], 422);
@@ -103,22 +103,22 @@ class SettingController extends Controller
      */
     public function update(Request $request,Setting $setting)
     {
-        $validator = \Validator::make($request->all(), [
-            'name' => 'required',
-            'title' => 'required',
-        ]);
-        if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
-        }
-        if ($message = $this->handleData($request,$setting)) {
-            return response()->json([
-                'errors' => ['body' => $message],
-            ], 422);
-        }
+        // $validator = \Validator::make($request->all(), [
+        //     'name' => 'required',
+        //     'body' => 'required',
+        // ]);
+        // if ($validator->fails()) {
+        //     return response()->json(['errors' => $validator->errors()], 422);
+        // }
+        // if ($message = $this->handleData($request,$setting)) {
+        //     return response()->json([
+        //         'errors' => ['body' => $message],
+        //     ], 422);
+        // }
 
-        return response()->json([
-            'redirectUri' => session('redirect_uri', route('cms.settings.index')),
-        ]);
+        // return response()->json([
+        //     'redirectUri' => session('redirect_uri', route('cms.settings.index')),
+        // ]);
     }
     
     /**
@@ -154,13 +154,8 @@ class SettingController extends Controller
             if (!$setting) {
                 $setting = new Setting;
             }
-            $setting->title = $request->input('title')??[];
             $setting->name = $request->input('name');
-            $setting->descr = $request->input('descr') ?: [];
-            $setting->image = $request->input('image') ?: [];
-            $setting->body = $request->input('body') ?: [];
-            $setting->link_type = $request->input('link_type');
-            $setting->link = $request->input('link');
+            $setting->body = $request->input('body') ?: '';
             $setting->save();
             DB::commit();
         } catch (\Illuminate\Database\QueryException $exception) {

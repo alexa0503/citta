@@ -22,16 +22,16 @@
 
 $config = array();
 
-$config['loadRoutes'] = true;
+$config['loadRoutes'] = false;
 
-$config['authentication'] = '\CKSource\CKFinderBridge\CKFinderMiddleware';
+$config['authentication'] = '\App\Http\Middleware\CustomCKFinderAuth';
 
 /*============================ License Key ============================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
-
 $config['licenseName'] = 'cityloveplus.dev.com';
 $config['licenseKey']  = '*B?D-*1**-V**6-*W**-*A**-V*P*-5**L';
+
 /*============================ CKFinder Internal Directory ============================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_privateDir
 
@@ -82,8 +82,8 @@ $config['backends']['laravel_logs'] = array(
 $config['backends']['default'] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-    'baseUrl'      => config('app.url').'/userfiles/',
-    'root'         => public_path('/userfiles/'),
+    'baseUrl'      => config('app.url').'/storage/',
+    'root'         => public_path('/storage/'),
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,
     'filesystemEncoding' => 'UTF-8'
@@ -92,7 +92,7 @@ $config['backends']['default'] = array(
 /*================================ Resource Types =====================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_resourceTypes
 
-$config['defaultResourceTypes'] = '';
+$config['defaultResourceTypes'] = 'Images';
 
 $config['resourceTypes'][] = array(
     'name'              => 'Files', // Single quotes not allowed.
@@ -153,7 +153,7 @@ $config['forceAscii'] = false;
 $config['xSendfile'] = false;
 
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_debug
-$config['debug'] = false;
+$config['debug'] = true;
 
 /*==================================== Plugins ========================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_plugins
@@ -181,7 +181,7 @@ $config['sessionWriteClose'] = true;
 /*================================= CSRF protection ===================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_csrfProtection
 
-$config['csrfProtection'] = true;
+$config['csrfProtection'] = false;
 
 /*============================== End of Configuration =================================*/
 

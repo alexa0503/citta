@@ -27,11 +27,18 @@ class Sidebar extends Component
             ],
             [
                 'title' => '中奖用户',
-                'route_name' => 'cms.users',
-                'id' => 'cms_users',
+                'route_name' => 'cms.winners',
+                'id' => 'cms_winners',
                 'icon' => 'format-list-bulleted',
                 'has_children' => true
             ],
+            // [
+            //     'title' => '设置',
+            //     'route_name' => 'cms.settings',
+            //     'id' => 'cms_settings',
+            //     'icon' => 'format-list-bulleted',
+            //     'has_children' => false
+            // ],
         ];
     }
 

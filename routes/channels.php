@@ -16,7 +16,3 @@ use Illuminate\Support\Facades\Broadcast;
 // Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
 //     return (int) $user->id === (int) $id;
 // });
-//队伍战况
-Broadcast::channel('teams', function ($teams) {
-	return $teams;
-});

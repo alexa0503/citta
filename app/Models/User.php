@@ -12,9 +12,6 @@ class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
-    protected $casts = [
-        'is_activated' => 'boolean'
-    ];
 
     /**
      * The attributes that are mass assignable.

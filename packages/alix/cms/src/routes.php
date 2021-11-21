@@ -2,6 +2,7 @@
 
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use Illuminate\Http\Request;
 
 //['auth:cms', 'menu']
 Route::group(['middleware' => ['web', 'cms_auth:alix-cms'], 'prefix' => 'cms', 'namespace' => 'Alix\Cms\Http\Controllers', 'as' => 'cms.'], function () {
@@ -15,9 +16,16 @@ Route::group(['middleware' => ['web', 'cms_auth:alix-cms'], 'prefix' => 'cms', '
 
     // Route::get('/users/{userid}/download', 'Admin\UserController@download')->name('users.download');
     Route::resource('users', 'UserController');
-    Route::resource('settings', 'SettingController');
+    // Route::resource('settings', 'SettingController');
     Route::resource('posts', 'PostController');
     Route::resource('appointments', 'AppointmentController');
+    Route::resource('winners', 'WinnerController');
+    Route::post('settings/{id}', function (Request $request, $id) {
+        $setting = \App\Models\Setting::find($id);
+        $setting->body = $setting->body['shown'] ? ['shown' => false] : ['shown' => true];
+        $setting->save();
+        return response()->json([]);
+    })->name('settings.update');
 
     Route::get('upload', 'IndexController@upload')->name('upload');
     //

@@ -15,16 +15,8 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('openid',120)->unique();
-            $table->string('mallcoo_id',120)->unique()->nullable();
-            $table->string('mallcoo_nickname')->nullable();
-            $table->string('mallcoo_mobile')->nullable();
-            $table->string('mallcoo_avatar')->nullable();
-            $table->unsignedSmallInteger('team')->nullable();//1,2队
-            $table->unsignedInteger('points')->default(0);
-            $table->boolean('mallcoo_has_received')->default(0);
-            $table->string('session_key')->nullable();
-            $table->timestamp('joined_at')->nullable();
+            $table->string('name');
+            $table->string('password');
             $table->timestamps();
         });
     }
