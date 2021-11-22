@@ -162,6 +162,7 @@ a {
     position: fixed;
     bottom: 50px;
     left: 140px;
+    cursor: pointer;
 }
 .arrowBottom img {
     width: 65px;

@@ -24,7 +24,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1.0,initial-scale=1,user-scalable=no,viewport-fit=true" />
-    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="{{asset('css/fullpage.min.css')}}">
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <script src="{{asset('js/easings.min.js')}}"></script>
@@ -87,9 +87,9 @@
                     </ul>
                 </li> --}}
                 <li data-menuanchor="aboutcitta1"><a href="#aboutcitta1">{{__("关于臻逸")}}</a></li>
-                <li data-menuanchor="aboutkwah1"><a href="#aboutkwah1">{{__("关于嘉华")}}</a></li>
                 <li data-menuanchor="projects"><a href="#projects">{{__("精彩项目")}}</a></li>
                 <li data-menuanchor="contactus"><a href="#contactus">{{__("联系我们")}}</a></li>
+                <li data-menuanchor="aboutkwah5"><a href="#aboutkwah5">{{__("关于嘉华")}}</a></li>
             </ul>
         </div>
         <div class="footer">
@@ -192,14 +192,24 @@
                 if (destination.anchor == 'contactus') {
                     $("#arrowDown").addClass("hidden");
                     $("#arrowUp").removeClass("hidden");
+
                 } else {
                     $("#arrowDown").removeClass("hidden");
                     $("#arrowUp").addClass("hidden");
+
+
                 }
             },
             //Scrolling
             css3: true
         , });
+
+        $("#arrowUp").click(function() {
+            fullpage_api.moveSectionUp();
+        });
+        $("#arrowDown").click(function() {
+            fullpage_api.moveSectionDown();
+        });
 
     </script>
 </body>
