@@ -19,6 +19,16 @@ a {
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    position: relative;
+}
+.page .footer,
+.page .title {
+    position: absolute;
+}
+.page .footer > img,
+.page .title > img {
+    width: 100%;
+    display: block;
 }
 #menu {
     position: fixed;
