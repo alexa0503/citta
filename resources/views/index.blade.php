@@ -42,12 +42,12 @@
             <div class="slide">
             @endif
                 <div class="page" style="background-image: url({{$item['image']}})">
-                @if(isset($item['title']))
-                <div class="title" style="{{$item['title']['style']??''}}"><img src="{{$item['title']['image']??''}}" alt="" /></div>
-                @endif
-                @if(isset($item['footer']))
-                <div class="footer" style="{{$item['footer']['style']??''}}"><img src="{{$item['footer']['image']??''}}" alt="" /></div>
-                @endif
+                    @if(isset($item['title']))
+                    <div class="title" style="{{$item['title']['style']??''}}"><img src="{{$item['title']['image']??''}}" alt="" /></div>
+                    @endif
+                    @if(isset($item['footer']))
+                    <div class="footer" style="{{$item['footer']['style']??''}}"><img src="{{$item['footer']['image']??''}}" alt="" /></div>
+                    @endif
                 </div>
             @if(count($items) > 1)
             </div>

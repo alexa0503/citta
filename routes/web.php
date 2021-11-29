@@ -194,6 +194,11 @@ Route::any('/', function (Request $request) {
                 ],
             ],
         ],
+        'projects'=>[
+            [
+                'image' => asset('images/pages/23.jpg'),
+            ],
+        ],
     ];
     return view('index', [
         'languages' => $languages,
