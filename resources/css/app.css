@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #848E90;
+    background-color: #848e90;
     color: #fff;
 }
 a {
@@ -101,11 +101,36 @@ a {
     line-height: 60px;
     font-weight: 200;
 }
+#menu ul > li:hover > a {
+    color: #fff;
+}
 #menu ul li.active a {
     color: white;
 }
+#menu ul li ul {
+    display: none;
+    transform: translate(0, -30px);
+}
+#menu ul > li:active > ul,
+#menu ul > li.active > ul,
+#menu ul > li:hover > ul {
+    display: block;
+    transform: translate(0, 0);
+    animation: menuTrans 500ms 1;
+}
+@keyframes menuTrans {
+    from {
+        transform: translate(0, -30px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
 #menu ul li ul li {
     margin-left: 56px;
+}
+#menu ul li ul li a {
+    font-size: 20px;
 }
 #menu .footer {
     position: absolute;
