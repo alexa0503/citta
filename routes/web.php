@@ -16,11 +16,7 @@ use Illuminate\Http\Request;
 */
 
 Route::any('/', function (Request $request) {
-    $languages = [
-        'zh-CN' => "中",
-        'zh-HK' => "繁",
-        'en-US' => "Eng",
-    ];
+    $languages = config("app.languages");
     $locale = in_array($request->input('lang'), array_keys($languages)) ? $request->input('lang') : 'zh-CN';
     App::setLocale($locale);
     $pages = [
@@ -194,16 +190,17 @@ Route::any('/', function (Request $request) {
                 ],
             ],
         ],
-        'projects'=>[
-            [
-                'image' => asset('images/pages/23.jpg'),
-            ],
-        ],
     ];
     return view('index', [
         'languages' => $languages,
         'pages' => $pages
     ]);
+});
+Route::get("/prjects",function(Request $request){
+    $languages = config("app.languages");
+    $locale = in_array($request->input('lang'), array_keys($languages)) ? $request->input('lang') : 'zh-CN';
+    App::setLocale($locale);
+    return view('projects');
 });
 Route::group(['middleware' => ['auth']], function () {
     Route::any('/cms/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')

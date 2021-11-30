@@ -232,5 +232,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+    "languages" => [
+        'zh-CN' => "中",
+        'zh-HK' => "繁",
+        'en-US' => "Eng",
+    ],
 
 ];

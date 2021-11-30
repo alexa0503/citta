@@ -40,7 +40,7 @@
             @foreach($items as $k => $item)
             @if(count($items) > 1)
             <div class="slide">
-            @endif
+                @endif
                 <div class="page" style="background-image: url({{$item['image']}})">
                     @if(isset($item['title']))
                     <div class="title" style="{{$item['title']['style']??''}}"><img src="{{$item['title']['image']??''}}" alt="" /></div>
@@ -49,7 +49,7 @@
                     <div class="footer" style="{{$item['footer']['style']??''}}"><img src="{{$item['footer']['image']??''}}" alt="" /></div>
                     @endif
                 </div>
-            @if(count($items) > 1)
+                @if(count($items) > 1)
             </div>
             @endif
             @endforeach
@@ -64,45 +64,7 @@
             <img src="{{asset('images/icon-menu.png')}}" alt="menu" />
         </div>
     </div>
-    <div id="menu" class="hidden">
-        <div class="header">
-            <div class="languages">
-                @foreach($languages as $key => $value)
-                <a href="/?lang={{$key}}" {{App::currentLocale() === $key?'class=active':''}}>{{$value}}</a>
-                @endforeach
-            </div>
-            <div class="close">
-                <img src="{{asset('images/icon-close.png')}}" alt="close" />
-            </div>
-        </div>
-        <div class="menus">
-            <ul id="menus">
-                <li data-menuanchor="home" class="active"><a href="#home">{{__("首页")}}</a></li>
-                {{-- <li><a href="#">{{__("关于臻逸")}}</a>
-                <ul>
-                    <li data-menuanchor="aboutcitta1"><a href="#aboutcitta1">{{__("品牌概念")}}</a></li>
-                    <li data-menuanchor="aboutcitta2"><a href="#aboutcitta2">{{__("品牌创建")}}</a></li>
-                </ul>
-                </li>
-                <li><a href="#">{{__("关于嘉华")}}</a>
-                    <ul>
-                        <li data-menuanchor="aboutkwah1"><a href="#aboutkwah1">{{__("核心价值")}}</a></li>
-                        <li data-menuanchor="aboutkwah2"><a href="#aboutkwah2">{{__("品牌愿景")}}</a></li>
-                        <li data-menuanchor="aboutkwah3"><a href="#aboutkwah3">{{__("品牌定位")}}</a></li>
-                        <li data-menuanchor="aboutkwah4"><a href="#aboutkwah4">{{__("物业服务")}}</a></li>
-                        <li data-menuanchor="aboutkwah5"><a href="#aboutkwah5">{{__("关于我们")}}</a></li>
-                    </ul>
-                </li> --}}
-                <li data-menuanchor="aboutcitta1"><a href="#aboutcitta1">{{__("关于臻逸")}}</a></li>
-                <li data-menuanchor="projects"><a href="#projects">{{__("精彩项目")}}</a></li>
-                <li data-menuanchor="contactus"><a href="#contactus">{{__("联系我们")}}</a></li>
-                <li data-menuanchor="aboutkwah5"><a href="#aboutkwah5">{{__("关于嘉华")}}</a></li>
-            </ul>
-        </div>
-        <div class="footer">
-            <a href="" download=""><img src="{{asset('images/'.app()->currentLocale().'/icon-download.png')}}" alt="download" /></a>
-        </div>
-    </div>
+    @include('components.menu')
     <div id="menuWrapper" class="hidden"></div>
     <div class="arrowBottom">
         <img id="arrowDown" src="{{asset('images/icon-arrow-down.png')}}" alt="next" />
@@ -192,6 +154,10 @@
             , slidesNavigation: true
             , slidesNavPosition: 'bottom'
             , loopHorizontal: false
+            // , scrollingSpeed: 1000
+            // , easing: 'easeInQuart'
+            , easingcss3: 'linear'
+            // ,lazyLoading:true
             , afterResize: function(width, height) {
                 // resizePage();
             }
@@ -203,8 +169,6 @@
                 } else {
                     $("#arrowDown").removeClass("hidden");
                     $("#arrowUp").addClass("hidden");
-
-
                 }
             },
             //Scrolling
