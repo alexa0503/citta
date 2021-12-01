@@ -104,9 +104,9 @@ a {
 #menu ul > li:hover > a {
     color: #fff;
 }
-#menu ul li.active a {
+/* #menu ul li.active a {
     color: white;
-}
+} */
 #menu ul li ul {
     display: none;
     transform: translate(0, -30px);

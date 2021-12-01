@@ -118,19 +118,6 @@ Route::any('/', function (Request $request) {
                 ],
             ],
         ],
-        'projects'=>[
-            [
-                'image' => asset('images/pages/23.jpg'),
-                // 'title' => [
-                //     'image'=>asset('images/'.$locale.'/title-22.png'),
-                //     'style'=>'left:14%;top:30%;width:14.355%;'
-                // ],
-                // 'footer' => [
-                //     'image'=>asset('images/'.$locale.'/footer-22.png'),
-                //     'style'=>'left:0;bottom:0;width:100%;'
-                // ],
-            ],
-        ],
         'aboutkwah1'=>[
             [
                 'image' => asset('images/pages/15.jpg'),
@@ -209,7 +196,7 @@ Route::any('/', function (Request $request) {
         'pages' => $pages
     ]);
 });
-Route::get("/prjects",function(Request $request){
+Route::get("/projects",function(Request $request){
     $languages = config("app.languages");
     $locale = in_array($request->input('lang'), array_keys($languages)) ? $request->input('lang') : 'zh-CN';
     App::setLocale($locale);
