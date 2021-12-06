@@ -48,7 +48,7 @@
         </div>
         <div class="fullwidth projects">
             <img src="{{asset("images/projects/header-02.png")}}" alt="" />
-            <div class="descr" style="bottom: 100px;left:200px;width:30vw;">
+            <div class="descr" style="bottom: 100px;left:10vw;width:40vw;">
                 <img src="{{asset("images/projects/".app()->getLocale()."/3.png")}}" alt="" />
             </div>
         </div>
@@ -78,7 +78,7 @@
         </div>
         <div class="fullwidth projects">
             <img src="{{asset("images/projects/header-07.png")}}" alt="" />
-            <div class="descr" style="bottom:100px;right:200px;width:30vw;">
+            <div class="descr" style="bottom:100px;right:10vw;width:40vw;">
                 <img src="{{asset("images/projects/".app()->getLocale()."/8.png")}}" alt="" />
             </div>
         </div>
