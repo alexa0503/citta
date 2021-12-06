@@ -35,7 +35,80 @@
 
 <body>
     <div id="container">
-        <div class="page" style="top:0;left:0;right:0;bottom:0;position:fixed;background-image: url({{url('/images/pages/23.jpg')}})"></div>
+        <div class="fullwidth projects">
+            <img src="{{asset("images/projects/header-01.png")}}" alt="" />
+            <div class="descr" style="left: 100px;top: 40%;width:30vw;">
+                <img src="{{asset("images/projects/".app()->getLocale()."/slogan.png")}}" alt="" />
+            </div>
+        </div>
+        <div class="fullwidth projects-row" style="margin-top: 60px;margin-bottom:60px;">
+            <div style="padding:0 100px 0 300px;"><img alt="" src="{{asset("images/projects/1.png")}}" /></div>
+            <div style="padding: 0 100px 0 0;"><img alt="" src="{{asset("images/projects/".app()->getLocale()."/2.png")}}" /></div>
+        </div>
+        <div class="fullwidth projects">
+            <img src="{{asset("images/projects/header-02.png")}}" alt="" />
+            <div class="descr" style="bottom: 100px;left:200px;width:30vw;">
+                <img src="{{asset("images/projects/".app()->getLocale()."/3.png")}}" alt="" />
+            </div>
+        </div>
+        <div class="fullwidth projects-row" style="margin-top: 30px;margin-bottom:30px;">
+            <div style="padding:0 40px 0 0;"><img alt="" src="{{asset("images/projects/map.png")}}" /></div>
+            <div style="padding: 0 100px 0 40px;"><img alt="" src="{{asset("images/projects/".app()->getLocale()."/4.png")}}" /></div>
+        </div>
+        <div class="fullwidth projects-row" style="margin-top: 0;margin-bottom:30px;">
+            <div style="padding:0 20px 0 100px;display:flex;align-items:center;">
+                <div style="max-width:400px"><img alt="" src="{{asset("images/projects/".app()->getLocale()."/5.png")}}" /></div>
+            </div>
+            <div style="width:65vw;"><img alt="" src="{{asset("images/projects/header-04.png")}}" /></div>
+        </div>
+
+        <div class="fullwidth projects-row" style="margin-top: 30px;margin-bottom:30px;">
+            <div style="width:65vw;"><img alt="" src="{{asset("images/projects/header-05.png")}}" /></div>
+            <div style="padding: 0 100px 0 40px;display:flex;align-items:center;">
+                <div style="max-width:400px"><img alt="" src="{{asset("images/projects/".app()->getLocale()."/6.png")}}" /></div>
+            </div>
+        </div>
+
+        <div class="fullwidth projects-row" style="margin-top: 0;margin-bottom:30px;">
+            <div style="padding:0 20px 0 80px;display:flex;align-items:center;">
+                <div style="max-width:400px"><img alt="" src="{{asset("images/projects/".app()->getLocale()."/7.png")}}" /></div>
+            </div>
+            <div style="width:65vw;"><img alt="" src="{{asset("images/projects/header-06.png")}}" /></div>
+        </div>
+        <div class="fullwidth projects">
+            <img src="{{asset("images/projects/header-07.png")}}" alt="" />
+            <div class="descr" style="bottom:100px;right:200px;width:30vw;">
+                <img src="{{asset("images/projects/".app()->getLocale()."/8.png")}}" alt="" />
+            </div>
+        </div>
+        <div style="margin: 100px 200px;">
+            <div class="fullwidth projects">
+                <img src="{{asset("images/projects/header-08.png")}}" alt="" />
+                <div class="descr" style="bottom:30%;right:10px;width:30vw;">
+                    <img src="{{asset("images/projects/".app()->getLocale()."/9.png")}}" alt="" />
+                </div>
+            </div>
+            <div style="width: 60%;margin:20px 20% 0;">
+                <img class="image" alt="" src="{{asset("images/projects/".app()->getLocale()."/10.png")}}" />
+            </div>
+            <div class="fullwidth news" style="margin-top: 130px;margin-bottom:30px;height:300px;">
+               <div class="title">最新资讯</div>
+               <div class="content">
+                   <ul>
+                       <li></li>
+                   </ul>
+               </div>
+               <div style="width:30vw;right:0;top:0;position:absolute;z-index:-1">
+                   <img class="image" src="{{asset('/images/projects/header-09.png')}}" alt="" />
+               </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>{{__('上海市静安区恒丰路18号 邮编：200070')}}</p>
+            <p>{{__('租赁热线：（86-21）6317 6888')}}</p>
+            <p>info@cittaresidences.com</p>
+        </div>
+        <div class="footer-more">{{__('更多房源信息请点击右侧预订页面')}}</div>
     </div>
     <div id="header">
         <div id="logo">
@@ -47,10 +120,6 @@
     </div>
     @include('components.menu',['page'=>'projects'])
     <div id="menuWrapper" class="hidden"></div>
-    {{-- <div class="arrowBottom">
-        <img id="arrowDown" src="{{asset('images/icon-arrow-down.png')}}" alt="next" />
-        <img id="arrowUp" src="{{asset('images/icon-arrow-up.png')}}" alt="prev" class="hidden" />
-    </div> --}}
     <script>
         @if(env('APP_ENV') === 'production')
         window.oncontextmenu = function(e) {
@@ -58,40 +127,7 @@
         }
         @endif
 
-        function resizePage() {
-            // const height = $(".fp-tableCell").height();
-            // const width = $(".fp-tableCell").width();
-            // let left = 0;
-            // let width1 = 0;
-            // if (width / height > 1920 / 1080) {
-            //     width1 = height * (1920 / 1080);
-            //     left = ($("#container").width() - width1) / 2;
-            //     // $(".page").width(height * (1920 / 1080));
-            // } else {
-            //     width1 = width;
-            //     left = 0;
-            // }
-            // $("#header").css({
-            //     left: left + "px"
-            // });
-            // $("#header").width(width1);
-            // $("#menuWrapper").width(width1);
-            // $("#menuWrapper").css({
-            //     left: left + "px"
-            // });
-            // $("#menu").css({
-            //     right: left + "px"
-            // });
-            // $(".fp-controlArrow.fp-next").css({
-            //     right: (left + 140) + "px"
-            // });
-            // $(".fp-controlArrow.fp-prev").css({
-            //     left: (left + 140) + "px"
-            // });
-            // $(".arrowBottom").css({
-            //     left: (left + 140) + "px"
-            // });
-        }
+        function resizePage() {}
         $().ready(function() {
             // resizePage();
             $("#menu .close").click(() => {
@@ -115,10 +151,6 @@
                 $("#nav").css({
                     opacity: 1
                 });
-                // const section = fullpage_api.getActiveSection();
-                // $('#menus .item').removeClass("active");
-                // $(this).addClass("active");
-                // $("#menus").find(".item").get(section.index).addClass(".active");
             });
         });
 

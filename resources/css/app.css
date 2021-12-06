@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #848e90;
+    background-color: #A5C0CC;
     color: #fff;
 }
 a {
@@ -241,4 +241,70 @@ a {
     .fp-controlArrow.fp-prev {
         left: 20px;
     }
+}
+.fullwidth {
+    width: 100%;
+}
+.projects {
+    position: relative;
+}
+.projects>img {
+    width: 100%;
+    display: block;
+}
+.projects .descr {
+    position: absolute;
+}
+.projects .descr > img {
+    display: block;
+    width: 100%;
+}
+.projects-row {
+    display: flex;
+    flex-direction: row;
+}
+.projects-row img {
+    max-width: 100%;
+}
+.projects-row > div {
+    flex: auto;
+}
+.news {
+    position: relative;
+    font-size: 12px;
+    color: #303030;
+}
+.news .title {
+    font-size: 16px;
+    line-height: 2;
+}
+.news .content {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 2px;
+    min-height: 200px;
+    overflow: auto;
+    margin-right: 26vw;
+}
+.news .content ul,
+.news .content ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+}
+.image {
+    display: block;width:100%
+}
+.footer {
+    text-align: center;
+    margin: 140px 0 0;
+    color: #303030;
+    font-size: 16px;
+    font-weight: 600;
+}
+.footer-more {
+    text-align: center;
+    margin: 60px 0 60px;
+    color: #303030;
+    font-size: 12px;
 }
