@@ -92,7 +92,7 @@
                 <img class="image" alt="" src="{{asset("images/projects/".app()->getLocale()."/10.png")}}" />
             </div>
             <div class="fullwidth news" style="margin-top: 130px;margin-bottom:30px;height:300px;">
-               <div class="title">最新资讯</div>
+               <div class="title">{{__('最新资讯')}}</div>
                <div class="content">
                    <ul>
                        <li></li>
