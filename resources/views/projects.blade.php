@@ -40,6 +40,7 @@
             <div class="descr" style="left: 100px;top: 40%;width:30vw;">
                 <img src="{{asset("images/projects/".app()->getLocale()."/slogan.png")}}" alt="" />
             </div>
+            <div class="reserve"><a href="http://booking.stanfordresidences.com/" target="_blank"><img src="{{asset('images/projects/icon-reserve.png')}}" alt="" /></a></div>
         </div>
         <div class="fullwidth projects-row" style="margin-top: 60px;margin-bottom:60px;">
             <div style="padding:0 100px 0 300px;"><img alt="" src="{{asset("images/projects/1.png")}}" /></div>

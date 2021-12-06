@@ -308,3 +308,13 @@ a {
     color: #303030;
     font-size: 12px;
 }
+.reserve {
+    position: absolute;
+    right: 40px;
+    bottom: 60px;
+    width: 60px;
+}
+.reserve img {
+    display: block;
+    width: 100%;
+}
