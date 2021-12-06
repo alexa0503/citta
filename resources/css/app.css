@@ -309,10 +309,11 @@ a {
     font-size: 12px;
 }
 .reserve {
-    position: absolute;
+    position: fixed;
     right: 40px;
     bottom: 60px;
     width: 60px;
+    z-index: 2000;
 }
 .reserve img {
     display: block;
