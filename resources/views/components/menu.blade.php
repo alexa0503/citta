@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="menus">
-        <ul id="menus">
+        <ul id="menus" class="{{App::currentLocale()}}">
             <li data-menuanchor="home"><a href="{{ url('/?lang='.App::currentLocale()) }}#home">{{__("首页")}}</a></li>
             <li data-menuanchor="aboutcitta1"><a href="{{ url('/?lang='.App::currentLocale()) }}#aboutcitta1">{{__("关于臻逸")}}</a></li>
             <li data-menuanchor="" {{isset($page) && $page === 'projects'?' class=active':''}}><a href="javascript:;">{{__("精彩项目")}}</a>

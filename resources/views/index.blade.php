@@ -8,7 +8,7 @@
     <meta name="360-site-verification" content="" />
     <meta property="google-site-verification" content="" />
     <meta charset="utf-8" />
-    <title>{{env("APP_NAME")}}</title>
+    <title>{{__(env("APP_NAME"))}}</title>
     <meta name="keywords" content="" />
     <meta name="description" content="{{env('APP_NAME')}}" />
     <meta property="og:url" content="{{env('APP_URL')}}" />
@@ -40,16 +40,16 @@
             @foreach($items as $k => $item)
             @if(count($items) > 1)
             <div class="slide">
-                @endif
-                <div class="page" style="background-image: url({{$item['image']}})">
+            @endif
+                <div class="page {{"page-{$key}-{$k}"}}" style="background-image: url({{$item['image']}})">
                     @if(isset($item['title']))
-                    <div class="title" style="{{$item['title']['style']??''}}"><img src="{{$item['title']['image']??''}}" alt="" /></div>
+                    <div class="title"><img src="{{$item['title']['image']??''}}" alt="" /></div>
                     @endif
                     @if(isset($item['footer']))
-                    <div class="footer" style="{{$item['footer']['style']??''}}"><img src="{{$item['footer']['image']??''}}" alt="" /></div>
+                    <div class="footer"><img src="{{$item['footer']['image']??''}}" alt="" /></div>
                     @endif
                 </div>
-                @if(count($items) > 1)
+            @if(count($items) > 1)
             </div>
             @endif
             @endforeach

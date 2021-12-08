@@ -8,7 +8,7 @@
     <meta name="360-site-verification" content="" />
     <meta property="google-site-verification" content="" />
     <meta charset="utf-8" />
-    <title>{{env("APP_NAME")}}</title>
+    <title>{{__(env("APP_NAME"))}}</title>
     <meta name="keywords" content="" />
     <meta name="description" content="{{env('APP_NAME')}}" />
     <meta property="og:url" content="{{env('APP_URL')}}" />
