@@ -2,7 +2,11 @@
     <div class="header">
         <div class="languages">
             @foreach(config('app.languages') as $key => $value)
+            @if(isset($page) && $page === 'projects')
+            <a href="/projects/?lang={{$key}}" {{App::currentLocale() === $key?'class=active':''}}>{{$value}}</a>
+            @else
             <a href="/?lang={{$key}}" {{App::currentLocale() === $key?'class=active':''}}>{{$value}}</a>
+            @endif
             @endforeach
         </div>
         <div class="close">
