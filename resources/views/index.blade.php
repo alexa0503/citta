@@ -70,6 +70,7 @@
         <img id="arrowDown" src="{{asset('images/icon-arrow-down.png')}}" alt="next" />
         <img id="arrowUp" src="{{asset('images/icon-arrow-up.png')}}" alt="prev" class="hidden" />
     </div>
+    <div id="footer"><a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2021035513号</a></div>
     <script>
         @if(env('APP_ENV') === 'production')
         window.oncontextmenu = function(e) {

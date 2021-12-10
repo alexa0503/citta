@@ -319,3 +319,16 @@ a {
     display: block;
     width: 100%;
 }
+#footer {
+    position: fixed;
+    text-align: right;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+#footer a {
+    color: white;
+}
