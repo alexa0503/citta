@@ -78,42 +78,7 @@
         }
         @endif
 
-        function resizePage() {
-            // const height = $(".fp-tableCell").height();
-            // const width = $(".fp-tableCell").width();
-            // let left = 0;
-            // let width1 = 0;
-            // if (width / height > 1920 / 1080) {
-            //     width1 = height * (1920 / 1080);
-            //     left = ($("#container").width() - width1) / 2;
-            //     // $(".page").width(height * (1920 / 1080));
-            // } else {
-            //     width1 = width;
-            //     left = 0;
-            // }
-            // $("#header").css({
-            //     left: left + "px"
-            // });
-            // $("#header").width(width1);
-            // $("#menuWrapper").width(width1);
-            // $("#menuWrapper").css({
-            //     left: left + "px"
-            // });
-            // $("#menu").css({
-            //     right: left + "px"
-            // });
-            // $(".fp-controlArrow.fp-next").css({
-            //     right: (left + 140) + "px"
-            // });
-            // $(".fp-controlArrow.fp-prev").css({
-            //     left: (left + 140) + "px"
-            // });
-            // $(".arrowBottom").css({
-            //     left: (left + 140) + "px"
-            // });
-        }
         $().ready(function() {
-            // resizePage();
             $("#menu .close").click(() => {
                 $("#menu").addClass("hidden");
                 $("#menuWrapper").addClass("hidden");
@@ -135,22 +100,15 @@
                 $("#nav").css({
                     opacity: 1
                 });
-                // const section = fullpage_api.getActiveSection();
-                // $('#menus .item').removeClass("active");
-                // $(this).addClass("active");
-                // $("#menus").find(".item").get(section.index).addClass(".active");
             });
         });
 
         new fullpage('#container', {
-            //options here
             autoScrolling: true
             , scrollHorizontally: true
-                // , anchors: ['home', 'aboutcitta', 'aboutkwah', 'projects', 'contactus']
             , menu: "#menus"
             , navigation: false
             , navigationPosition: 'right'
-                // , navigationTooltips: ['firstSlide', 'secondSlide']
             , showActiveTooltip: false
             , slidesNavigation: true
             , slidesNavPosition: 'bottom'
@@ -159,20 +117,15 @@
             // , easing: 'easeInQuart'
             , easingcss3: 'linear'
             // ,lazyLoading:true
-            , afterResize: function(width, height) {
-                // resizePage();
-            }
             , afterLoad: function(origin, destination, direction) {
                 if (destination.anchor == 'contactus') {
                     $("#arrowDown").addClass("hidden");
                     $("#arrowUp").removeClass("hidden");
-
                 } else {
                     $("#arrowDown").removeClass("hidden");
                     $("#arrowUp").addClass("hidden");
                 }
             },
-            //Scrolling
             css3: true
         , });
 
@@ -182,7 +135,6 @@
         $("#arrowDown").click(function() {
             fullpage_api.moveSectionDown();
         });
-
     </script>
 </body>
 
