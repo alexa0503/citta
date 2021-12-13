@@ -97,11 +97,13 @@
             });
 
             $('#menus li a').click(function() {
-                $("#menu").addClass("hidden");
-                $("#menuWrapper").addClass("hidden");
-                $("#nav").css({
-                    opacity: 1
-                });
+                if($(this).text()!=="{{__('精彩项目')}}"){
+                    $("#menu").addClass("hidden");
+                    $("#menuWrapper").addClass("hidden");
+                    $("#nav").css({
+                        opacity: 1
+                    });
+                }
             });
         });
 

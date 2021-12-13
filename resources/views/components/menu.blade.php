@@ -17,7 +17,7 @@
         <ul id="menus" class="{{App::currentLocale()}}">
             <li data-menuanchor="home"><a href="{{ url('/?lang='.App::currentLocale()) }}#home">{{__("首页")}}</a></li>
             <li data-menuanchor="aboutcitta1"><a href="{{ url('/?lang='.App::currentLocale()) }}#aboutcitta1">{{__("关于臻逸")}}</a></li>
-            <li data-menuanchor="" {{isset($page) && $page === 'hengfeng'?' class=active':''}}><a href="javascript:;">{{__("精彩项目")}}</a>
+            <li data-menuanchor=""  @class(['active'=>isset($page) && $page === 'hengfeng'])><a href="javascript:void(0);">{{__("精彩项目")}}</a>
                 <ul>
                     <li data-menuanchor=""><a href="{{ url('/hengfeng/?lang='.App::currentLocale()) }}">{{__("臻逸恒丰服务式公寓")}}</a></li>
                 </ul>
