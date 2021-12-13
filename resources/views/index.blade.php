@@ -36,14 +36,15 @@
 <body>
     <div id="container">
         @foreach($pages as $key => $items)
-        <div class="section {{$key === 0 ? 'active':''}}" data-anchor="{{$key}}">
+        <div class="section @class(['active'=>$key===0]) data-anchor="{{$key}}">
             @foreach($items as $k => $item)
             @if(count($items) > 1)
             <div class="slide">
             @endif
-                <div class="page {{"page-{$key}-{$k}"}}" style="background-image: url({{$item['image']}})">
+                <div class="page {{"page-{$key}-{$k}"}}">
                     @if(isset($item['title']))
-                    <div class="title"><img src="{{$item['title']['image']??''}}" alt="" /></div>
+                    <div class="title xs-hidden"><img src="{{$item['title']['image']??''}}" alt="" /></div>
+                    <div class="title md-hidden"><img src="{{$item['title']['mobileImage']??''}}" alt="" /></div>
                     @endif
                     @if(isset($item['footer']))
                     <div class="footer"><img src="{{$item['footer']['image']??''}}" alt="" /></div>

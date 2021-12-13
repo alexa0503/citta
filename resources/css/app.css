@@ -423,6 +423,69 @@ a {
     bottom: 0;
     width: 100%;
 }
+.page-home-0 {
+    background-image: url(/images/pages/1.jpg);
+}
+.page-home-1 {
+    background-image: url(/images/pages/2.jpg);
+}
+.page-home-2 {
+    background-image: url(/images/pages/3.jpg);
+}
+.page-home-3 {
+    background-image: url(/images/pages/4.jpg);
+}
+.page-home-4 {
+    background-image: url(/images/pages/5.jpg);
+}
+.page-aboutcitta1-0 {
+    background-image: url(/images/pages/7.jpg);
+}
+.page-aboutcitta1-1 {
+    background-image: url(/images/pages/8.jpg);
+}
+.page-aboutcitta1-2 {
+    background-image: url(/images/pages/9.jpg);
+}
+.page-aboutcitta1-3 {
+    background-image: url(/images/pages/10.jpg);
+}
+.page-aboutcitta1-4 {
+    background-image: url(/images/pages/11.jpg);
+}
+.page-aboutcitta1-5 {
+    background-image: url(/images/pages/12.jpg);
+}
+.page-aboutcitta2-0 {
+    background-image: url(/images/pages/13.jpg);
+}
+.page-aboutcitta2-1 {
+    background-image: url(/images/pages/14.jpg);
+}
+.page-aboutkwah1-0 {
+    background-image: url(/images/pages/15.jpg);
+}
+.page-aboutkwah1-1 {
+    background-image: url(/images/pages/16.jpg);
+}
+.page-aboutkwah1-2 {
+    background-image: url(/images/pages/17.jpg);
+}
+.page-aboutkwah2-0 {
+    background-image: url(/images/pages/18.jpg);
+}
+.page-aboutkwah3-0 {
+    background-image: url(/images/pages/19.jpg);
+}
+.page-aboutkwah4-0 {
+    background-image: url(/images/pages/20.jpg);
+}
+.page-aboutkwah5-0 {
+    background-image: url(/images/pages/21.jpg);
+}
+.page-contactus-0 {
+    background-image: url(/images/pages/22.jpg);
+}
 @media (max-width: 768px) {
     .fp-controlArrow.fp-next {
         right: 20px;
@@ -499,6 +562,205 @@ a {
     }
     #menu .footer img {
         max-width: 100%;
+    }
+    #header {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    .page-home-0 .title {
+        left: initial;
+        right: 10%;
+        top: 26%;
+        width: 55%;
+    }
+    .page-home-1 .title {
+        left: initial;
+        right: 10%;
+        top: 26%;
+        width: 55%;
+    }
+    .page-home-2 .title {
+        left: initial;
+        right: 10%;
+        top: 26%;
+        width: 55%;
+    }
+    .page-home-3 .title {
+        left: initial;
+        right: 10%;
+        top: 26%;
+        width: 55%;
+    }
+    .page-home-4 .title {
+        left: initial;
+        right: 10%;
+        top: 60%;
+        width: 55%;
+    }
+
+    .page-aboutcitta1-0 .title {
+        left: 0;
+        bottom: initial;
+        top: 21%;
+        width: 62.4%;
+        right: initial;
+    }
+    .page-aboutcitta1-1 .title {
+        left: 25%;
+        top: 50%;
+        bottom: initial;
+        width: 43%;
+    }
+    .page-aboutcitta1-2 .title {
+        left: 15%;
+        top: 34.5%;
+        width: 30%;
+    }
+    .page-aboutcitta1-3 .title {
+        right: 30%;
+        bottom: 16.5%;
+        width: 30%;
+    }
+    .page-aboutcitta1-4 .title {
+        left: 16%;
+        top: 33.5%;
+        width: 40%;
+    }
+    .page-aboutcitta1-5 .title {
+        left: 40%;
+        top: 26%;
+        bottom: initial;
+        width: 40%;
+    }
+    .page-aboutcitta2-0 .title {
+        left: 22%;
+        bottom: initial;
+        top:26%;
+        width: 44.44%;
+    }
+    .page-aboutcitta2-1 .title {
+        left: 32%;
+        bottom: initial;
+        top:26%;
+        width: 33.89%;
+    }
+    .page-aboutkwah1-0 .title {
+        left: 18%;
+        bottom: initial;
+        top: 26%;
+        width: 45.556%;
+    }
+    .page-aboutkwah1-1 .title {
+        left: 10%;
+        bottom: initial;
+        top: 20%;
+        width: 47.778%;
+    }
+    .page-aboutkwah1-2 .title {
+        left: 30%;
+        bottom: initial;
+        top: 20%;
+        width: 43.426%;
+    }
+    .page-aboutkwah2-0 .title {
+        left: 33.33%;
+        bottom: 0;
+        width: 25.88%;
+    }
+    .page-aboutkwah3-0 .title {
+        left: 14%;
+        bottom: 0;
+        width: 30.22%;
+    }
+    .page-aboutkwah4-0 .title {
+        left: 12%;
+        top: 24%;
+        width: 13.7%;
+    }
+    .page-aboutkwah5-0 .title {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .page-contactus-0 .title {
+        left: 14%;
+        top: 30%;
+        width: 14.355%;
+    }
+    .page-contactus-0 .footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .page-home-0 {
+        background-image: url(/images/pages/mobile/1.jpg);
+    }
+    .page-home-1 {
+        background-image: url(/images/pages/mobile/2.jpg);
+    }
+    .page-home-2 {
+        background-image: url(/images/pages/mobile/3.jpg);
+    }
+    .page-home-3 {
+        background-image: url(/images/pages/mobile/4.jpg);
+    }
+    .page-home-4 {
+        background-image: url(/images/pages/mobile/5.jpg);
+    }
+    .page-aboutcitta1-0 {
+        background-image: url(/images/pages/mobile/7.jpg);
+    }
+    .page-aboutcitta1-1 {
+        background-image: url(/images/pages/mobile/8.jpg);
+    }
+    .page-aboutcitta1-2 {
+        background-image: url(/images/pages/mobile/9.jpg);
+    }
+    .page-aboutcitta1-3 {
+        background-image: url(/images/pages/mobile/10.jpg);
+    }
+    .page-aboutcitta1-4 {
+        background-image: url(/images/pages/mobile/11.jpg);
+    }
+    .page-aboutcitta1-5 {
+        background-image: url(/images/pages/mobile/12.jpg);
+    }
+    .page-aboutcitta2-0 {
+        background-image: url(/images/pages/mobile/13.jpg);
+    }
+    .page-aboutcitta2-1 {
+        background-image: url(/images/pages/mobile/14.jpg);
+    }
+    .page-aboutkwah1-0 {
+        background-image: url(/images/pages/mobile/15.jpg);
+    }
+    .page-aboutkwah1-1 {
+        background-image: url(/images/pages/mobile/16.jpg);
+    }
+    .page-aboutkwah1-2 {
+        background-image: url(/images/pages/mobile/17.jpg);
+    }
+    .page-aboutkwah2-0 {
+        background-image: url(/images/pages/mobile/18.jpg);
+    }
+    .page-aboutkwah3-0 {
+        background-image: url(/images/pages/mobile/19.jpg);
+    }
+    .page-aboutkwah4-0 {
+        background-image: url(/images/pages/mobile/20.jpg);
+    }
+    .page-aboutkwah5-0 {
+        background-image: url(/images/pages/mobile/21.jpg);
+    }
+    .page-contactus-0 {
+        background-image: url(/images/pages/mobile/22.jpg);
+    }
+    .xs-hidden {
+        display: none;
+    }
+}
+@media (min-width: 769px) {
+    .md-hidden {
+        display: none;
     }
 }
 #footer {

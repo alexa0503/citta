@@ -23,7 +23,7 @@
                 </ul>
             </li>
             <li data-menuanchor="contactus"><a href="{{ url('/?lang='.App::currentLocale()) }}#contactus">{{__("联系我们")}}</a></li>
-            <li data-menuanchor="aboutkwah5"><a href="{{ url('/?lang='.App::currentLocale()) }}#aboutkwah5">{{__("关于嘉华")}}</a></li>
+            <li data-menuanchor="aboutkwah1"><a href="{{ url('/?lang='.App::currentLocale()) }}#aboutkwah1">{{__("核心价值")}}</a></li>
         </ul>
     </div>
     <div class="footer">
