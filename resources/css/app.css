@@ -247,6 +247,9 @@ a {
 }
 .projects .descr {
     position: absolute;
+    left: 100px;
+    top: 40%;
+    width: 30vw;
 }
 .projects .descr > img {
     display: block;
@@ -308,6 +311,23 @@ a {
     bottom: 60px;
     width: 60px;
     z-index: 2000;
+    border-radius: 10px;
+    background-color: #225F76;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.2;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.en-US .reserve  {
+    font-size: 12px;
+}
+.reserve  a {
+    color: #fff;
+    text-decoration: none;
 }
 .reserve img {
     display: block;
@@ -351,12 +371,12 @@ a {
 .page-aboutcitta1-2 .title {
     left: 15%;
     top: 36.5%;
-    width: 15.01%;
+    width: 30%;
 }
 .page-aboutcitta1-3 .title {
     right: 6%;
     bottom: 16.5%;
-    width: 15.01%;
+    width: 30%;
 }
 .page-aboutcitta1-4 .title {
     left: 16%;
@@ -486,6 +506,14 @@ a {
 .page-contactus-0 {
     background-image: url(/images/pages/22.jpg);
 }
+.projects {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #303030;
+}
+.en-US .projects {
+    line-height: 1.2;
+}
 @media (max-width: 768px) {
     .fp-controlArrow.fp-next {
         right: 20px;
@@ -613,12 +641,13 @@ a {
     .page-aboutcitta1-2 .title {
         left: 15%;
         top: 34.5%;
-        width: 30%;
+        width: 60%;
     }
     .page-aboutcitta1-3 .title {
-        right: 30%;
+        left: 20%;
         bottom: 16.5%;
-        width: 30%;
+        right: initial;
+        width: 60%;
     }
     .page-aboutcitta1-4 .title {
         left: 16%;
@@ -634,13 +663,13 @@ a {
     .page-aboutcitta2-0 .title {
         left: 22%;
         bottom: initial;
-        top:26%;
+        top: 26%;
         width: 44.44%;
     }
     .page-aboutcitta2-1 .title {
         left: 32%;
         bottom: initial;
-        top:26%;
+        top: 26%;
         width: 33.89%;
     }
     .page-aboutkwah1-0 .title {
@@ -662,19 +691,21 @@ a {
         width: 43.426%;
     }
     .page-aboutkwah2-0 .title {
-        left: 33.33%;
-        bottom: 0;
-        width: 25.88%;
+        left: 20%;
+        top: 38%;
+        bottom: initial;
+        width: 70%;
     }
     .page-aboutkwah3-0 .title {
-        left: 14%;
-        bottom: 0;
-        width: 30.22%;
+        left: 5%;
+        bottom: initial;
+        top: 20%;
+        width: 50%;
     }
     .page-aboutkwah4-0 .title {
-        left: 12%;
-        top: 24%;
-        width: 13.7%;
+        left: 3%;
+        top: 16%;
+        width: 36.7%;
     }
     .page-aboutkwah5-0 .title {
         left: 0;
@@ -682,9 +713,9 @@ a {
         width: 100%;
     }
     .page-contactus-0 .title {
-        left: 14%;
-        top: 30%;
-        width: 14.355%;
+        left: 8%;
+        top: 26%;
+        width: 45%;
     }
     .page-contactus-0 .footer {
         left: 0;
@@ -754,13 +785,83 @@ a {
     .page-contactus-0 {
         background-image: url(/images/pages/mobile/22.jpg);
     }
+    
+    .projects .descr {
+        position: absolute;
+        left: 30px;
+        top: 40%;
+        width: 55vw;
+    }
+    .projects .descr > img {
+        display: block;
+        width: 100%;
+    }
     .xs-hidden {
-        display: none;
+        display: none !important;
+    }
+    .md-hidden img {
+        display: block;
+        width: 100%;
+    }
+    .header-02-descr {
+        position: absolute;
+        color: #fff;
+        left: 0;
+        bottom: 0;
+        margin: 0 60px 30px 30px;
+    }
+    .header-02-descr h1 {
+        font-size: 16px;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+    }
+    .header-02-descr p {
+        margin: 10px 0;
+        padding: 0;
+    }
+    .projects-map-descr {
+        width: 50%;
+        margin: 0 0 40px 0;
+    }
+    .projects-descr {
+        margin: 20px 40px;
+    }
+    .projects-map-descr h1 {
+        margin: 20px 0 0 20px;
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .projects-map-descr h2 {
+        margin: 0 0 0 20px;
+        font-size: 11px;
+        font-weight: normal;
+    }
+    .projects-descr h1 {
+        font-size: 16px;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+    }
+    .projects-descr p {
+        margin: 10px 0;
+        padding: 0; 
+    }
+    .projects-service h1 {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+    .projects-service ul,
+    .projects-service ul li {
+        margin: 0 0 0 0;
+        padding: 0 0 0 7px;
     }
 }
 @media (min-width: 769px) {
     .md-hidden {
-        display: none;
+        display: none !important;
     }
 }
 #footer {

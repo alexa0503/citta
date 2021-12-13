@@ -47,7 +47,8 @@
                     <div class="title md-hidden"><img src="{{$item['title']['mobileImage']??''}}" alt="" /></div>
                     @endif
                     @if(isset($item['footer']))
-                    <div class="footer"><img src="{{$item['footer']['image']??''}}" alt="" /></div>
+                    <div class="footer md-hidden"><img src="{{$item['footer']['mobileImage']??''}}" alt="" /></div>
+                    <div class="footer xs-hidden"><img src="{{$item['footer']['image']??''}}" alt="" /></div>
                     @endif
                 </div>
             @if(count($items) > 1)
