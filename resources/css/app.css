@@ -255,6 +255,9 @@ a {
     display: block;
     width: 100%;
 }
+.projects .descr p {
+    font-size: 14px;
+}
 .projects-row {
     display: flex;
     flex-direction: row;

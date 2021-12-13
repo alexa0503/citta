@@ -166,7 +166,7 @@
                 <div><img alt="" src="{{asset("images/projects/mobile/header-08.png")}}" /></div>
                 <div class="projects-descr" style="margin: 20px 0;">
                     <h1>{{__('贴心物业，全方位臻享服务')}}</h1>
-                    <p>{{__('凭借仕德福30多年丰富的酒店运营经验和丰富物业管理经验，传承国际精品酒店管理模式，将高档社区的舒适居住体验与细腻的酒店式物业服务相结合，为住户提供优越臻享的物业管家服务，令每一位住户均能享受私密安心、体贴舒适的优质居住体验，礼遇美好生活。')}}</p>
+                    <p>{{__('凭借30多年丰富的酒店运营经验和丰富物业管理经验，传承国际精品酒店管理模式，将高档社区的舒适居住体验与细腻的酒店式物业服务相结合，为住户提供优越臻享的物业管家服务，令每一位住户均能享受私密安心、体贴舒适的优质居住体验，礼遇美好生活。')}}</p>
                 </div>
             </div>
             <div class="fullwidth projects projects-service">
@@ -213,8 +213,10 @@
         <div style="margin: 100px 200px;" class="xs-hidden">
             <div class="fullwidth projects">
                 <img src="{{asset("images/projects/header-08.png")}}" alt="" />
-                <div class="descr" style="bottom:30%;right:10px;width:30vw;">
-                    <img src="{{asset("images/projects/".app()->getLocale()."/9.png")}}" alt="" />
+                <div class="descr" style="bottom:30%;right:30px;width:30vw;left:initial;">
+                    {{-- <img src="{{asset("images/projects/".app()->getLocale()."/9.png")}}" alt="" /> --}}
+                    <h1>{{__('贴心物业，全方位臻享服务')}}</h1>
+                    <p>{{__('凭借30多年丰富的酒店运营经验和丰富物业管理经验，传承国际精品酒店管理模式，将高档社区的舒适居住体验与细腻的酒店式物业服务相结合，为住户提供优越臻享的物业管家服务，令每一位住户均能享受私密安心、体贴舒适的优质居住体验，礼遇美好生活。')}}</p>
                 </div>
             </div>
             
