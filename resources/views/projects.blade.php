@@ -138,7 +138,7 @@
             </div>
             <div style="width:65vw;"><img alt="" src="{{asset("images/projects/header-06.png")}}" /></div>
         </div>
-        
+
         <div class="fullwidth projects md-hidden">
             <div><img alt="" src="{{asset("images/projects/mobile/header-06.png")}}" /></div>
             <div class="projects-descr">
@@ -153,7 +153,7 @@
                 <img src="{{asset("images/projects/".app()->getLocale()."/8.png")}}" alt="" />
             </div>
         </div>
-        
+
         <div class="fullwidth projects md-hidden">
             <div><img alt="" src="{{asset("images/projects/mobile/header-07.png")}}" /></div>
             <div class="projects-descr">
@@ -219,7 +219,7 @@
                     <p>{{__('凭借30多年丰富的酒店运营经验和丰富物业管理经验，传承国际精品酒店管理模式，将高档社区的舒适居住体验与细腻的酒店式物业服务相结合，为住户提供优越臻享的物业管家服务，令每一位住户均能享受私密安心、体贴舒适的优质居住体验，礼遇美好生活。')}}</p>
                 </div>
             </div>
-            
+
             <div style="width: 60%;margin:20px 20% 0;">
                 <img class="image" alt="" src="{{asset("images/projects/".app()->getLocale()."/10.png")}}" />
             </div>
@@ -237,7 +237,7 @@
         </div>
         <div class="footer">
             <p>{{__('上海市静安区恒丰路18号 邮编：200070')}}</p>
-            <p>{{__('租赁热线：（86-21）6317 6788')}}</p>
+            <p>{{__('租赁热线：（86-21）6317 7888')}}</p>
             <p>info@cittaresidences.com</p>
         </div>
         <div class="footer-more">{{__('更多房源信息请点击右侧预订页面')}}</div>
