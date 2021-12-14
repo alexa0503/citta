@@ -30,7 +30,8 @@
     <script src="{{asset('js/easings.min.js')}}"></script>
     <script src="{{asset('js/scrolloverflow.min.js')}}"></script>
     <script src="{{asset('js/fullpage.min.js')}}"></script>
-    <script src="{{mix('js/app.js')}}"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    {{-- <script src="{{mix('js/app.js')}}"></script> --}}
 </head>
 
 <body>
@@ -81,14 +82,15 @@
         @endif
 
         $().ready(function() {
-            $("#menu .close").click(() => {
+            $("#menu .close").click(function(){
+
                 $("#menu").addClass("hidden");
                 $("#menuWrapper").addClass("hidden");
                 $("#nav").css({
                     opacity: 1
                 });
             });
-            $("#nav").click(() => {
+            $("#nav").click(function(){
                 $("#menu").removeClass("hidden");
                 $("#menuWrapper").removeClass("hidden");
                 $("#nav").css({

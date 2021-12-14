@@ -1,1 +1,891 @@
-body{background-color:#a5c0cc;color:#fff;margin:0;padding:0}a{border:none;text-decoration:none}#container{margin:0 auto}#container .page{background-position:bottom;background-repeat:no-repeat;background-size:cover;height:100%;margin:0 auto;position:relative;width:100%}.page .footer,.page .title{position:absolute}.page .footer>img,.page .title>img{display:block;width:100%}#menu{background-color:rgba(34,95,118,.5);bottom:0;display:flex;flex-direction:column;position:fixed;right:0;top:0;width:428px;z-index:1003}#menu .header{align-items:center;display:flex;height:170px;justify-content:space-between}#menu .languages{align-items:center;color:#104a54;display:inline-flex;font-size:24px;justify-content:center;text-align:center;width:256px}#menu .languages a{border-right:1px solid #104a54;color:#104a54;display:inline-block;height:24px;line-height:24px;padding:0 10px}#menu .languages a:last-child{border-right:none}#menu .languages a.active{color:#fff}#menu .close{align-items:center;border-left:2px solid #fff;display:flex;height:170px;justify-content:center;text-align:center;width:170px}#menu .close img{cursor:pointer;display:block;height:31px;width:31px}#menu .menus{margin:110px 0 0 90px}#menu ul,#menu ul li{list-style:none;margin:0;padding:0}#menu ul li a{color:#9bf9eb;display:block;font-size:28px;font-weight:200;line-height:1;padding:16px 0}#menu ul>li:hover>a{color:#fff}#menu ul li ul{display:none}#menu ul>li.active>ul,#menu ul>li:active>ul,#menu ul>li:hover>ul{display:block}@-webkit-keyframes menuTrans{0%{transform:translateY(-30px)}to{transform:translate(0)}}@keyframes menuTrans{0%{transform:translateY(-30px)}to{transform:translate(0)}}#menu ul li ul li{margin-left:28px}#menu ul li ul li a{font-size:20px}#menu .footer{bottom:0;left:0;margin:0 0 50px 90px;position:absolute}#menu .footer img{max-width:230px}#menuWrapper{background-color:rgba(99,99,99,.63);bottom:0;height:100%;z-index:1002}#header,#menuWrapper{left:0;position:fixed;top:0;width:100%}#header{background-color:hsla(0,0%,100%,.5);flex-direction:row;justify-content:space-between;right:0;z-index:1001}#header,#logo{align-items:center;display:flex;height:170px}#logo{border-right:2px solid #fff;justify-content:center;width:330px}#logo img{display:block;height:128px}#nav{align-items:center;border-left:2px solid #fff;display:flex;height:170px;justify-content:center;width:170px}#nav img{cursor:pointer;display:block;width:35px}.hidden{display:none!important}.arrowBottom{bottom:50px;cursor:pointer;left:140px;position:fixed}.arrowBottom img{height:48px;width:65px}#fp-nav ul,.fp-slidesNav ul{align-items:center;display:flex;justify-content:center}#fp-nav ul li a span,.fp-slidesNav ul li a span{background:#fff}.fp-controlArrow.fp-next{background-image:url(/images/icon-arrow-right.png);right:140px}.fp-controlArrow.fp-next,.fp-controlArrow.fp-prev{background-position:0 0;background-repeat:no-repeat;background-size:100% auto;border:none}.fp-controlArrow.fp-prev{background-image:url(/images/icon-arrow-left.png);left:140px}.fp-controlArrow{height:75px!important;width:75px!important}.fullwidth{width:100%}.projects{position:relative}.projects>img{display:block;width:100%}.projects .descr{left:100px;position:absolute;top:40%;width:30vw}.projects .descr>img{display:block;width:100%}.projects .descr p{font-size:14px}.projects-row{display:flex;flex-direction:row}.projects-row img{max-width:100%}.projects-row>div{flex:auto}.news{color:#303030;font-size:12px;position:relative}.news .title{font-size:16px;line-height:2}.news .content{background-color:hsla(0,0%,100%,.5);border-radius:2px;margin-right:26vw;min-height:200px;overflow:auto}.news .content ul,.news .content ul li{line-height:20px;list-style:none;margin:0;padding:0}.image{display:block;width:100%}.footer{font-size:16px;font-weight:600;margin:140px 0 0}.footer,.footer-more{color:#303030;text-align:center}.footer-more{font-size:12px;margin:60px 0}.reserve{align-items:center;background-color:#225f76;border-radius:10px;bottom:60px;color:#fff;display:flex;font-size:16px;height:60px;justify-content:center;line-height:1.2;position:fixed;right:40px;text-align:center;width:60px;z-index:2000}.en-US .reserve{font-size:12px}.reserve a{color:#fff;text-decoration:none}.reserve img{display:block;width:100%}.page-home-0 .title{left:19%;top:43%;width:30%}.page-home-1 .title{right:15%;top:25%;width:30%}.page-home-2 .title{left:19%;top:24.5%;width:30%}.page-home-3 .title{right:15%;top:24.5%;width:30%}.page-home-4 .title{bottom:21.5%;right:14%;width:30%}.page-aboutcitta1-0 .title{bottom:0;right:10%;width:38.92%}.page-aboutcitta1-1 .title{bottom:12.5%;left:20%;width:22.51%}.page-aboutcitta1-2 .title{left:15%;top:36.5%;width:30%}.page-aboutcitta1-3 .title{bottom:16.5%;right:6%;width:30%}.page-aboutcitta1-4 .title{left:16%;top:33.5%;width:20.01%}.page-aboutcitta1-5 .title{bottom:23.5%;left:10%;width:20.01%}.page-aboutcitta2-0 .title,.page-aboutcitta2-1 .title{bottom:0;left:14%;width:30.24%}.page-aboutkwah1-0 .title{bottom:15%;left:18%;width:25.88%}.page-aboutkwah1-1 .title{left:18%;top:20%;width:25.88%}.page-aboutkwah1-2 .title{left:30%;top:30%;width:25.88%}.page-aboutkwah2-0 .title{bottom:0;left:33.33%;width:25.88%}.page-aboutkwah3-0 .title{bottom:0;left:14%;width:30.22%}.page-aboutkwah4-0 .title{left:12%;top:24%;width:13.7%}.page-aboutkwah5-0 .title{bottom:0;left:0;width:100%}.page-contactus-0 .title{left:14%;top:30%;width:14.355%}.page-contactus-0 .footer{bottom:0;left:0;width:100%}.page-home-0{background-image:url(/images/pages/1.jpg)}.page-home-1{background-image:url(/images/pages/2.jpg)}.page-home-2{background-image:url(/images/pages/3.jpg)}.page-home-3{background-image:url(/images/pages/4.jpg)}.page-home-4{background-image:url(/images/pages/5.jpg)}.page-aboutcitta1-0{background-image:url(/images/pages/7.jpg)}.page-aboutcitta1-1{background-image:url(/images/pages/8.jpg)}.page-aboutcitta1-2{background-image:url(/images/pages/9.jpg)}.page-aboutcitta1-3{background-image:url(/images/pages/10.jpg)}.page-aboutcitta1-4{background-image:url(/images/pages/11.jpg)}.page-aboutcitta1-5{background-image:url(/images/pages/12.jpg)}.page-aboutcitta2-0{background-image:url(/images/pages/13.jpg)}.page-aboutcitta2-1{background-image:url(/images/pages/14.jpg)}.page-aboutkwah1-0{background-image:url(/images/pages/15.jpg)}.page-aboutkwah1-1{background-image:url(/images/pages/16.jpg)}.page-aboutkwah1-2{background-image:url(/images/pages/17.jpg)}.page-aboutkwah2-0{background-image:url(/images/pages/18.jpg)}.page-aboutkwah3-0{background-image:url(/images/pages/19.jpg)}.page-aboutkwah4-0{background-image:url(/images/pages/20.jpg)}.page-aboutkwah5-0{background-image:url(/images/pages/21.jpg)}.page-contactus-0{background-image:url(/images/pages/22.jpg)}.projects{color:#303030;font-size:12px;line-height:1.6}.en-US .projects{line-height:1.2}@media (max-width:768px){.fp-controlArrow.fp-next{height:10vw!important;right:20px;width:10vw!important}.fp-controlArrow.fp-prev{height:10vw!important;left:20px;width:10vw!important}.arrowBottom{bottom:3vw;left:3vw}.arrowBottom img{height:7.384vw;width:10vw}#header,#logo{height:19vw}#logo{width:33.8vw}#logo img{height:90%}#nav{height:19vw;width:19vw}#nav img{width:4.9vw}#menu{width:68vw}#menu .menus{margin:30vw 0 0 6vw}#menu .languages{font-size:20px;padding:0 3vw;width:auto}#menu .header{height:19vw}#menu .close{height:19vw;width:19vw}#menu .close img{height:4vw;width:4vw}#menu ul li a{font-size:20px}#menu ul.en-US li a,#menu ul li ul li a{font-size:18px}#menu ul.en-US li ul li a{font-size:14px;line-height:1}#menu .footer{margin:0 11vw 50px 6vw}#menu .footer img{max-width:100%}#header{background-color:hsla(0,0%,100%,.8)}.page-home-0 .title,.page-home-1 .title,.page-home-2 .title,.page-home-3 .title{left:auto;right:10%;top:26%;width:55%}.page-home-4 .title{left:auto;right:10%;top:60%;width:55%}.page-aboutcitta1-0 .title{bottom:auto;left:0;right:auto;top:21%;width:62.4%}.page-aboutcitta1-1 .title{bottom:auto;left:25%;top:50%;width:43%}.page-aboutcitta1-2 .title{left:15%;top:34.5%;width:60%}.page-aboutcitta1-3 .title{bottom:16.5%;left:20%;right:auto;width:60%}.page-aboutcitta1-4 .title{left:16%;top:33.5%;width:40%}.page-aboutcitta1-5 .title{bottom:auto;left:40%;top:26%;width:40%}.page-aboutcitta2-0 .title{bottom:auto;left:22%;top:26%;width:44.44%}.page-aboutcitta2-1 .title{bottom:auto;left:32%;top:26%;width:33.89%}.page-aboutkwah1-0 .title{bottom:auto;left:18%;top:26%;width:45.556%}.page-aboutkwah1-1 .title{bottom:auto;left:10%;top:20%;width:47.778%}.page-aboutkwah1-2 .title{bottom:auto;left:30%;top:20%;width:43.426%}.page-aboutkwah2-0 .title{bottom:auto;left:20%;top:38%;width:70%}.page-aboutkwah3-0 .title{bottom:auto;left:5%;top:20%;width:50%}.page-aboutkwah4-0 .title{left:3%;top:16%;width:36.7%}.page-aboutkwah5-0 .title{bottom:0;left:0;width:100%}.page-contactus-0 .title{left:8%;top:26%;width:45%}.page-contactus-0 .footer{bottom:0;left:0;width:100%}.page-home-0{background-image:url(/images/pages/mobile/1.jpg)}.page-home-1{background-image:url(/images/pages/mobile/2.jpg)}.page-home-2{background-image:url(/images/pages/mobile/3.jpg)}.page-home-3{background-image:url(/images/pages/mobile/4.jpg)}.page-home-4{background-image:url(/images/pages/mobile/5.jpg)}.page-aboutcitta1-0{background-image:url(/images/pages/mobile/7.jpg)}.page-aboutcitta1-1{background-image:url(/images/pages/mobile/8.jpg)}.page-aboutcitta1-2{background-image:url(/images/pages/mobile/9.jpg)}.page-aboutcitta1-3{background-image:url(/images/pages/mobile/10.jpg)}.page-aboutcitta1-4{background-image:url(/images/pages/mobile/11.jpg)}.page-aboutcitta1-5{background-image:url(/images/pages/mobile/12.jpg)}.page-aboutcitta2-0{background-image:url(/images/pages/mobile/13.jpg)}.page-aboutcitta2-1{background-image:url(/images/pages/mobile/14.jpg)}.page-aboutkwah1-0{background-image:url(/images/pages/mobile/15.jpg)}.page-aboutkwah1-1{background-image:url(/images/pages/mobile/16.jpg)}.page-aboutkwah1-2{background-image:url(/images/pages/mobile/17.jpg)}.page-aboutkwah2-0{background-image:url(/images/pages/mobile/18.jpg)}.page-aboutkwah3-0{background-image:url(/images/pages/mobile/19.jpg)}.page-aboutkwah4-0{background-image:url(/images/pages/mobile/20.jpg)}.page-aboutkwah5-0{background-image:url(/images/pages/mobile/21.jpg)}.page-contactus-0{background-image:url(/images/pages/mobile/22.jpg)}.projects .descr{left:30px;position:absolute;top:40%;width:55vw}.projects .descr>img{display:block;width:100%}.xs-hidden{display:none!important}.md-hidden img{display:block;width:100%}.header-02-descr{bottom:0;color:#fff;left:0;margin:0 60px 30px 30px;position:absolute}.header-02-descr h1{font-size:16px;font-weight:400;margin:0;padding:0}.header-02-descr p{margin:10px 0;padding:0}.projects-map-descr{margin:0 0 40px;width:50%}.projects-descr{margin:20px 40px}.projects-map-descr h1{font-size:11px;font-weight:700;margin:20px 0 0 20px}.projects-map-descr h2{font-size:11px;font-weight:400;margin:0 0 0 20px}.projects-descr h1{font-size:16px;font-weight:400;margin:0;padding:0}.projects-descr p{margin:10px 0;padding:0}.projects-service h1{font-size:14px;font-weight:700;margin:0;padding:0}.projects-service ul,.projects-service ul li{margin:0;padding:0 0 0 7px}}@media (min-width:769px){.md-hidden{display:none!important}}#footer{bottom:0;font-size:14px;left:0;padding-bottom:10px;padding-right:10px;position:fixed;right:0;text-align:right}#footer a{color:#fff}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #a5c0cc;
+    color: #fff;
+}
+a {
+    text-decoration: none;
+    border: none;
+}
+#container {
+    /* max-width: 1920px; */
+    margin: 0 auto;
+}
+#container .page {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.page .footer,
+.page .title {
+    position: absolute;
+}
+.page .footer > img,
+.page .title > img {
+    width: 100%;
+    display: block;
+}
+#menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1003;
+    width: 428px;
+    background-color: rgba(34, 95, 118, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+#menu .header {
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menu .languages {
+    font-size: 24px;
+    color: #104a54;
+    text-align: center;
+    width: 256px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu .languages a {
+    border-right: 1px solid #104a54;
+    display: inline-block;
+    padding: 0 10px;
+    height: 24px;
+    color: #104a54;
+    line-height: 24px;
+}
+#menu .languages a:last-child {
+    border-right: none;
+}
+#menu .languages a.active {
+    color: white;
+}
+#menu .close {
+    width: 170px;
+    height: 170px;
+    text-align: center;
+    border-left: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu .close img {
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+    display: block;
+}
+#menu .menus {
+    margin: 110px 0 0 90px;
+}
+#menu ul,
+#menu ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu ul li a {
+    color: #9bf9eb;
+    font-size: 28px;
+    padding: 16px 0;
+    line-height: 1;
+    display: block;
+    font-weight: 200;
+}
+#menu ul > li:hover > a {
+    color: #fff;
+}
+/* #menu ul li.active a {
+    color: white;
+} */
+#menu ul li ul {
+    display: none;
+    /* transform: translate(0, -30px); */
+}
+#menu ul > li:active > ul,
+#menu ul > li.active > ul,
+#menu ul > li:hover > ul {
+    display: block;
+    /* transform: translate(0, 0); */
+    /* animation: menuTrans 500ms 1; */
+}
+@-webkit-keyframes menuTrans {
+    from {
+        transform: translate(0, -30px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+@keyframes menuTrans {
+    from {
+        transform: translate(0, -30px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+#menu ul li ul li {
+    margin-left: 28px;
+}
+#menu ul li ul li a {
+    font-size: 20px;
+}
+#menu .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 50px 90px;
+}
+#menu .footer img {
+    max-width: 230px;
+}
+#menuWrapper {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1002;
+    width: 100%;
+    background-color: rgba(99, 99, 99, 0.63);
+    height: 100%;
+    position: fixed;
+}
+#header {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1001;
+    height: 170px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#logo {
+    width: 330px;
+    height: 170px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-right: 2px solid rgba(255, 255, 255, 1);
+}
+#logo img {
+    height: 128px;
+    display: block;
+}
+#nav {
+    width: 170px;
+    height: 170px;
+    border-left: 2px solid rgba(255, 255, 255, 1);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#nav img {
+    width: 35px;
+    display: block;
+    cursor: pointer;
+}
+.hidden {
+    display: none !important;
+}
+.arrowBottom {
+    position: fixed;
+    bottom: 50px;
+    left: 140px;
+    cursor: pointer;
+}
+.arrowBottom img {
+    width: 65px;
+    height: 48px;
+}
+#fp-nav ul,
+.fp-slidesNav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: #fff;
+}
+.fp-controlArrow.fp-next {
+    border: none;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% auto;
+    background-image: url("/images/icon-arrow-right.png");
+    right: 140px;
+}
+.fp-controlArrow.fp-prev {
+    border: none;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% auto;
+    background-image: url("/images/icon-arrow-left.png");
+    left: 140px;
+}
+
+.fp-controlArrow {
+    width: 75px !important;
+    height: 75px !important;
+}
+.fullwidth {
+    width: 100%;
+}
+.projects {
+    position: relative;
+}
+.projects > img {
+    width: 100%;
+    display: block;
+}
+.projects .descr {
+    position: absolute;
+    left: 100px;
+    top: 40%;
+    width: 30vw;
+}
+.projects .descr > img {
+    display: block;
+    width: 100%;
+}
+.projects .descr p {
+    font-size: 14px;
+}
+.projects-row {
+    display: flex;
+    flex-direction: row;
+}
+.projects-row img {
+    max-width: 100%;
+}
+.projects-row > div {
+    flex: auto;
+}
+.news {
+    position: relative;
+    font-size: 12px;
+    color: #303030;
+}
+.news .title {
+    font-size: 16px;
+    line-height: 2;
+}
+.news .content {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    min-height: 200px;
+    overflow: auto;
+    margin-right: 26vw;
+}
+.news .content ul,
+.news .content ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+}
+.image {
+    display: block;
+    width: 100%;
+}
+.footer {
+    text-align: center;
+    margin: 140px 0 0;
+    color: #303030;
+    font-size: 16px;
+    font-weight: 600;
+}
+.footer-more {
+    text-align: center;
+    margin: 60px 0 60px;
+    color: #303030;
+    font-size: 12px;
+}
+.reserve {
+    position: fixed;
+    right: 40px;
+    bottom: 60px;
+    width: 60px;
+    z-index: 2000;
+    border-radius: 10px;
+    background-color: #225F76;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.2;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.en-US .reserve  {
+    font-size: 12px;
+}
+.reserve  a {
+    color: #fff;
+    text-decoration: none;
+}
+.reserve img {
+    display: block;
+    width: 100%;
+}
+.page-home-0 .title {
+    left: 19%;
+    top: 43%;
+    width: 30%;
+}
+.page-home-1 .title {
+    right: 15%;
+    top: 25%;
+    width: 30%;
+}
+.page-home-2 .title {
+    left: 19%;
+    top: 24.5%;
+    width: 30%;
+}
+.page-home-3 .title {
+    right: 15%;
+    top: 24.5%;
+    width: 30%;
+}
+.page-home-4 .title {
+    right: 14%;
+    bottom: 21.5%;
+    width: 30%;
+}
+.page-aboutcitta1-0 .title {
+    right: 10%;
+    bottom: 0;
+    width: 38.92%;
+}
+.page-aboutcitta1-1 .title {
+    left: 20%;
+    bottom: 12.5%;
+    width: 22.51%;
+}
+.page-aboutcitta1-2 .title {
+    left: 15%;
+    top: 36.5%;
+    width: 30%;
+}
+.page-aboutcitta1-3 .title {
+    right: 6%;
+    bottom: 16.5%;
+    width: 30%;
+}
+.page-aboutcitta1-4 .title {
+    left: 16%;
+    top: 33.5%;
+    width: 20.01%;
+}
+.page-aboutcitta1-5 .title {
+    left: 10%;
+    bottom: 23.5%;
+    width: 20.01%;
+}
+.page-aboutcitta2-0 .title {
+    left: 14%;
+    bottom: 0%;
+    width: 30.24%;
+}
+.page-aboutcitta2-1 .title {
+    left: 14%;
+    bottom: 0%;
+    width: 30.24%;
+}
+.page-aboutkwah1-0 .title {
+    left: 18%;
+    bottom: 15%;
+    width: 25.88%;
+}
+.page-aboutkwah1-1 .title {
+    left: 18%;
+    top: 20%;
+    width: 25.88%;
+}
+.page-aboutkwah1-2 .title {
+    left: 30%;
+    top: 30%;
+    width: 25.88%;
+}
+.page-aboutkwah2-0 .title {
+    left: 33.33%;
+    bottom: 0;
+    width: 25.88%;
+}
+.page-aboutkwah3-0 .title {
+    left: 14%;
+    bottom: 0;
+    width: 30.22%;
+}
+.page-aboutkwah4-0 .title {
+    left: 12%;
+    top: 24%;
+    width: 13.7%;
+}
+.page-aboutkwah5-0 .title {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.page-contactus-0 .title {
+    left: 14%;
+    top: 30%;
+    width: 14.355%;
+}
+.page-contactus-0 .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.page-home-0 {
+    background-image: url(/images/pages/1.jpg);
+}
+.page-home-1 {
+    background-image: url(/images/pages/2.jpg);
+}
+.page-home-2 {
+    background-image: url(/images/pages/3.jpg);
+}
+.page-home-3 {
+    background-image: url(/images/pages/4.jpg);
+}
+.page-home-4 {
+    background-image: url(/images/pages/5.jpg);
+}
+.page-aboutcitta1-0 {
+    background-image: url(/images/pages/7.jpg);
+}
+.page-aboutcitta1-1 {
+    background-image: url(/images/pages/8.jpg);
+}
+.page-aboutcitta1-2 {
+    background-image: url(/images/pages/9.jpg);
+}
+.page-aboutcitta1-3 {
+    background-image: url(/images/pages/10.jpg);
+}
+.page-aboutcitta1-4 {
+    background-image: url(/images/pages/11.jpg);
+}
+.page-aboutcitta1-5 {
+    background-image: url(/images/pages/12.jpg);
+}
+.page-aboutcitta2-0 {
+    background-image: url(/images/pages/13.jpg);
+}
+.page-aboutcitta2-1 {
+    background-image: url(/images/pages/14.jpg);
+}
+.page-aboutkwah1-0 {
+    background-image: url(/images/pages/15.jpg);
+}
+.page-aboutkwah1-1 {
+    background-image: url(/images/pages/16.jpg);
+}
+.page-aboutkwah1-2 {
+    background-image: url(/images/pages/17.jpg);
+}
+.page-aboutkwah2-0 {
+    background-image: url(/images/pages/18.jpg);
+}
+.page-aboutkwah3-0 {
+    background-image: url(/images/pages/19.jpg);
+}
+.page-aboutkwah4-0 {
+    background-image: url(/images/pages/20.jpg);
+}
+.page-aboutkwah5-0 {
+    background-image: url(/images/pages/21.jpg);
+}
+.page-contactus-0 {
+    background-image: url(/images/pages/22.jpg);
+}
+.projects {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #303030;
+}
+.en-US .projects {
+    line-height: 1.2;
+}
+@media (max-width: 768px) {
+    .fp-controlArrow.fp-next {
+        right: 20px;
+        width: 10vw !important;
+        height: 10vw !important;
+    }
+    .fp-controlArrow.fp-prev {
+        left: 20px;
+        width: 10vw !important;
+        height: 10vw !important;
+    }
+    .arrowBottom {
+        left: 3vw;
+        bottom: 3vw;
+    }
+    .arrowBottom img {
+        width: 10vw;
+        height: 7.384vw;
+    }
+    #header,
+    #logo {
+        height: 19vw;
+    }
+    #logo {
+        width: 33.8vw;
+    }
+    #logo img {
+        height: 90%;
+    }
+    #nav {
+        width: 19vw;
+        height: 19vw;
+    }
+    #nav img {
+        width: 4.9vw;
+    }
+    #menu {
+        width: 68vw;
+    }
+    #menu .menus {
+        margin: 30vw 0 0 6vw;
+    }
+    #menu .languages {
+        font-size: 20px;
+        padding: 0 3vw;
+        width: auto;
+    }
+    #menu .header {
+        height: 19vw;
+    }
+    #menu .close {
+        width: 19vw;
+        height: 19vw;
+    }
+    #menu .close img {
+        width: 4vw;
+        height: 4vw;
+    }
+    #menu ul li a {
+        font-size: 20px;
+    }
+    #menu ul.en-US li a {
+        font-size: 18px;
+    }
+    #menu ul li ul li a {
+        font-size: 18px;
+    }
+    #menu ul.en-US li ul li a {
+        font-size: 14px;
+        line-height: 1;
+    }
+    #menu .footer {
+        margin: 0 11vw 50px 6vw;
+    }
+    #menu .footer img {
+        max-width: 100%;
+    }
+    #header {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    .page-home-0 .title {
+        left: initial;
+        right: 10%;
+        top: 26%;
+        width: 55%;
+    }
+    .page-home-1 .title {
+        left: initial;
+        right: 10%;
+        top: 26%;
+        width: 55%;
+    }
+    .page-home-2 .title {
+        left: initial;
+        right: 10%;
+        top: 26%;
+        width: 55%;
+    }
+    .page-home-3 .title {
+        left: initial;
+        right: 10%;
+        top: 26%;
+        width: 55%;
+    }
+    .page-home-4 .title {
+        left: initial;
+        right: 10%;
+        top: 60%;
+        width: 55%;
+    }
+
+    .page-aboutcitta1-0 .title {
+        left: 0;
+        bottom: initial;
+        top: 21%;
+        width: 62.4%;
+        right: initial;
+    }
+    .page-aboutcitta1-1 .title {
+        left: 25%;
+        top: 50%;
+        bottom: initial;
+        width: 43%;
+    }
+    .page-aboutcitta1-2 .title {
+        left: 15%;
+        top: 34.5%;
+        width: 60%;
+    }
+    .page-aboutcitta1-3 .title {
+        left: 20%;
+        bottom: 16.5%;
+        right: initial;
+        width: 60%;
+    }
+    .page-aboutcitta1-4 .title {
+        left: 16%;
+        top: 33.5%;
+        width: 40%;
+    }
+    .page-aboutcitta1-5 .title {
+        left: 40%;
+        top: 26%;
+        bottom: initial;
+        width: 40%;
+    }
+    .page-aboutcitta2-0 .title {
+        left: 22%;
+        bottom: initial;
+        top: 26%;
+        width: 44.44%;
+    }
+    .page-aboutcitta2-1 .title {
+        left: 32%;
+        bottom: initial;
+        top: 26%;
+        width: 33.89%;
+    }
+    .page-aboutkwah1-0 .title {
+        left: 18%;
+        bottom: initial;
+        top: 26%;
+        width: 45.556%;
+    }
+    .page-aboutkwah1-1 .title {
+        left: 10%;
+        bottom: initial;
+        top: 20%;
+        width: 47.778%;
+    }
+    .page-aboutkwah1-2 .title {
+        left: 30%;
+        bottom: initial;
+        top: 20%;
+        width: 43.426%;
+    }
+    .page-aboutkwah2-0 .title {
+        left: 20%;
+        top: 38%;
+        bottom: initial;
+        width: 70%;
+    }
+    .page-aboutkwah3-0 .title {
+        left: 5%;
+        bottom: initial;
+        top: 20%;
+        width: 50%;
+    }
+    .page-aboutkwah4-0 .title {
+        left: 3%;
+        top: 16%;
+        width: 36.7%;
+    }
+    .page-aboutkwah5-0 .title {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .page-contactus-0 .title {
+        left: 8%;
+        top: 26%;
+        width: 45%;
+    }
+    .page-contactus-0 .footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .page-home-0 {
+        background-image: url(/images/pages/mobile/1.jpg);
+    }
+    .page-home-1 {
+        background-image: url(/images/pages/mobile/2.jpg);
+    }
+    .page-home-2 {
+        background-image: url(/images/pages/mobile/3.jpg);
+    }
+    .page-home-3 {
+        background-image: url(/images/pages/mobile/4.jpg);
+    }
+    .page-home-4 {
+        background-image: url(/images/pages/mobile/5.jpg);
+    }
+    .page-aboutcitta1-0 {
+        background-image: url(/images/pages/mobile/7.jpg);
+    }
+    .page-aboutcitta1-1 {
+        background-image: url(/images/pages/mobile/8.jpg);
+    }
+    .page-aboutcitta1-2 {
+        background-image: url(/images/pages/mobile/9.jpg);
+    }
+    .page-aboutcitta1-3 {
+        background-image: url(/images/pages/mobile/10.jpg);
+    }
+    .page-aboutcitta1-4 {
+        background-image: url(/images/pages/mobile/11.jpg);
+    }
+    .page-aboutcitta1-5 {
+        background-image: url(/images/pages/mobile/12.jpg);
+    }
+    .page-aboutcitta2-0 {
+        background-image: url(/images/pages/mobile/13.jpg);
+    }
+    .page-aboutcitta2-1 {
+        background-image: url(/images/pages/mobile/14.jpg);
+    }
+    .page-aboutkwah1-0 {
+        background-image: url(/images/pages/mobile/15.jpg);
+    }
+    .page-aboutkwah1-1 {
+        background-image: url(/images/pages/mobile/16.jpg);
+    }
+    .page-aboutkwah1-2 {
+        background-image: url(/images/pages/mobile/17.jpg);
+    }
+    .page-aboutkwah2-0 {
+        background-image: url(/images/pages/mobile/18.jpg);
+    }
+    .page-aboutkwah3-0 {
+        background-image: url(/images/pages/mobile/19.jpg);
+    }
+    .page-aboutkwah4-0 {
+        background-image: url(/images/pages/mobile/20.jpg);
+    }
+    .page-aboutkwah5-0 {
+        background-image: url(/images/pages/mobile/21.jpg);
+    }
+    .page-contactus-0 {
+        background-image: url(/images/pages/mobile/22.jpg);
+    }
+    
+    .projects .descr {
+        position: absolute;
+        left: 30px;
+        top: 40%;
+        width: 55vw;
+    }
+    .projects .descr > img {
+        display: block;
+        width: 100%;
+    }
+    .xs-hidden {
+        display: none !important;
+    }
+    .md-hidden img {
+        display: block;
+        width: 100%;
+    }
+    .header-02-descr {
+        position: absolute;
+        color: #fff;
+        left: 0;
+        bottom: 0;
+        margin: 0 60px 30px 30px;
+    }
+    .header-02-descr h1 {
+        font-size: 16px;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+    }
+    .header-02-descr p {
+        margin: 10px 0;
+        padding: 0;
+    }
+    .projects-map-descr {
+        width: 50%;
+        margin: 0 0 40px 0;
+    }
+    .projects-descr {
+        margin: 20px 40px;
+    }
+    .projects-map-descr h1 {
+        margin: 20px 0 0 20px;
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .projects-map-descr h2 {
+        margin: 0 0 0 20px;
+        font-size: 11px;
+        font-weight: normal;
+    }
+    .projects-descr h1 {
+        font-size: 16px;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+    }
+    .projects-descr p {
+        margin: 10px 0;
+        padding: 0; 
+    }
+    .projects-service h1 {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+    .projects-service ul,
+    .projects-service ul li {
+        margin: 0 0 0 0;
+        padding: 0 0 0 7px;
+    }
+}
+@media (min-width: 769px) {
+    .md-hidden {
+        display: none !important;
+    }
+}
+#footer {
+    position: fixed;
+    text-align: right;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+#footer a {
+    color: white;
+}
+
