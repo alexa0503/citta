@@ -46,11 +46,11 @@
         </div>
         <div class="fullwidth projects-row xs-hidden" style="margin-top: 60px;margin-bottom:60px;">
             <div style="padding:0 100px 0 300px;"><img alt="" src="{{asset("images/projects/1.png")}}" /></div>
-            <div style="padding: 0 100px 0 0;"><img alt="{{__('秉持“臻品尚居，逸安于斯”的经营理念，臻逸恒丰从住户身心深层的需求出发，提供安全、舒适、便利的智慧化生活空间，将绿色环保的生态注入时尚设计，多种户型满足不同居住需求。更有内容丰富的共享社交活动，集结志趣相投的伙伴，带来空间品质的提升和更为开放的生活方式体验。')}}" src="{{asset("images/projects/".app()->getLocale()."/2.png")}}" /></div>
+            <div style="padding: 0 100px 0 0;"><img alt="{{__('秉持“臻悦尚居，逸安于斯”的经营理念，臻逸恒丰从住户身心深层的需求出发，提供安全、舒适、便利的智慧化生活空间，将绿色环保的生态注入时尚设计，多种户型满足不同居住需求。更有内容丰富的共享社交活动，集结志趣相投的伙伴，带来空间品质的提升和更为开放的生活方式体验。')}}" src="{{asset("images/projects/".app()->getLocale()."/2.png")}}" /></div>
         </div>
         <div class="fullwidth projects md-hidden">
             <div style="width:70%;margin:40px auto 0;"><img alt="" src="{{asset("images/projects/1.png")}}" /></div>
-            <div style="width:80%;margin:10px 10% 40px;">{{__('秉持“臻品尚居，逸安于斯”的经营理念，臻逸恒丰从住户身心深层的需求出发，提供安全、舒适、便利的智慧化生活空间，将绿色环保的生态注入时尚设计，多种户型满足不同居住需求。更有内容丰富的共享社交活动，集结志趣相投的伙伴，带来空间品质的提升和更为开放的生活方式体验。')}}</div>
+            <div style="width:80%;margin:10px 10% 40px;">{{__('秉持“臻悦尚居，逸安于斯”的经营理念，臻逸恒丰从住户身心深层的需求出发，提供安全、舒适、便利的智慧化生活空间，将绿色环保的生态注入时尚设计，多种户型满足不同居住需求。更有内容丰富的共享社交活动，集结志趣相投的伙伴，带来空间品质的提升和更为开放的生活方式体验。')}}</div>
         </div>
         <div class="fullwidth projects">
             <img class="xs-hidden" src="{{asset("images/projects/header-02.png")}}" alt="" />
