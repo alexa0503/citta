@@ -92,7 +92,7 @@ $config['backends']['default'] = array(
 /*================================ Resource Types =====================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_resourceTypes
 
-$config['defaultResourceTypes'] = 'Images';
+$config['defaultResourceTypes'] = '';
 
 $config['resourceTypes'][] = array(
     'name'              => 'Files', // Single quotes not allowed.
