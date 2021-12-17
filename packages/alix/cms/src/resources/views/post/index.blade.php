@@ -12,28 +12,26 @@
                                 <thead>
                                     <tr role="row">
                                         <th>{{ __('ID') }}</th>
-                                        <th>{{ __('Name') }}</th>
                                         <th>{{ __('标题') }}</th>
-                                        <th>{{ __('描述') }}</th>
+                                        <th>{{ __('内容') }}</th>
                                         <th>{{ __('创建时间') }}</th>
                                         <th>{{ __('操作') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($items as $k=>$item)
-                                        <tr role="row" class="row-check {{ $k%2==1?'odd':'even' }}">
-                                            <td>{{ $item->id }}</td>
-                                            <td>{{ $item->name }}</td>
-                                            <td>{{ $item->title['zh-CN']??'' }}</td>
-                                            <td>{{ $item->descr['zh-CN']??'' }}</td>
-                                            <td>{{ $item->created_at }}</td>
-                                            <td>
-                                                <div class="btn-group btn-group-sm">
-                                                    <a href="{{ route('cms.posts.edit',$item) }}" class="btn btn-secondary">{{ __('编辑') }}</a>
-                                                    <a href="#" data-method="DELETE" data-url="{{ route('cms.posts.destroy',$item) }}" class="btn btn-secondary destroy">{{ __('删除') }}</a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                    <tr role="row" class="row-check {{ $k%2==1?'odd':'even' }}">
+                                        <td>{{ $item->id }}</td>
+                                        <td>{{ $item->title['zh-CN']??'' }}</td>
+                                        <td>{{ isset($item->body['zh-CN'])?Str::limit(strip_tags($item->body['zh-CN']),300):'' }}</td>
+                                        <td>{{ $item->created_at }}</td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="{{ route('cms.posts.edit',$item) }}" class="btn btn-secondary">{{ __('编辑') }}</a>
+                                                <a href="#" data-method="DELETE" data-url="{{ route('cms.posts.destroy',$item) }}" class="btn btn-secondary destroy">{{ __('删除') }}</a>
+                                            </div>
+                                        </td>
+                                    </tr>
                                     @endforeach
                                 </tbody>
                             </table>
@@ -84,5 +82,6 @@
             that.find("input").prop("checked", !that.find("input").prop("checked"));
         });
     });
+
 </script>
 @append

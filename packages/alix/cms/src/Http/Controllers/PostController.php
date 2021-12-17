@@ -46,7 +46,6 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $validator = \Validator::make($request->all(), [
-            'name' => 'required',
             'title' => 'required',
         ]);
         if ($validator->fails()) {
@@ -96,7 +95,6 @@ class PostController extends Controller
     public function update(Request $request,Post $post)
     {
         $validator = \Validator::make($request->all(), [
-            'name' => 'required',
             'title' => 'required',
         ]);
         if ($validator->fails()) {
@@ -144,12 +142,7 @@ class PostController extends Controller
                 $post = new Post;
             }
             $post->title = $request->input('title')??[];
-            $post->name = $request->input('name');
-            $post->descr = $request->input('descr') ?: [];
-            $post->image = $request->input('image') ?: [];
             $post->body = $request->input('body') ?: [];
-            $post->link_type = $request->input('link_type');
-            $post->link = $request->input('link');
             $post->save();
             DB::commit();
         } catch (\Illuminate\Database\QueryException $exception) {

@@ -8,7 +8,7 @@
     <meta name="360-site-verification" content="" />
     <meta property="google-site-verification" content="" />
     <meta charset="utf-8" />
-    <title>{{__(env("APP_NAME"))}}</title>
+    <title>{{__("上海市静安区恒丰路服务式公寓介绍-臻逸")}}</title>
     <meta name="keywords" content="" />
     <meta name="description" content="{{env('APP_NAME')}}" />
     <meta property="og:url" content="{{env('APP_URL')}}" />
@@ -203,13 +203,16 @@
                 <div class="title">{{__('最新资讯')}}</div>
                 <div class="content">
                     <ul>
-                        <li></li>
+                        @foreach($posts as $post)
+                        <li><a href="{{url('hengfeng/'.$post->id)}}">{{$post->title[app()->getLocale()]??''}}</a></li>
+                        @endforeach
                     </ul>
+                    {{ $posts->links('vendor.pagination.tailwind') }}
                 </div>
                 <div style="left:-40px;right:-40px;top:200px;position:absolute;z-index:-1">
                     <img class="image" src="{{asset('/images/projects/header-09.png')}}" alt="" />
                 </div>
-             </div>
+            </div>
         </div>
         <div style="margin: 100px 200px;" class="xs-hidden">
             <div class="fullwidth projects">
@@ -225,15 +228,18 @@
                 <img class="image" alt="" src="{{asset("images/projects/".app()->getLocale()."/10.png")}}" />
             </div>
             <div class="fullwidth news" style="margin-top: 130px;margin-bottom:30px;height:300px;">
-               <div class="title">{{__('最新资讯')}}</div>
-               <div class="content">
-                   <ul>
-                       <li></li>
-                   </ul>
-               </div>
-               <div style="width:30vw;right:0;top:0;position:absolute;z-index:-1">
-                   <img class="image" src="{{asset('/images/projects/header-09.png')}}" alt="" />
-               </div>
+                <div class="title">{{__('最新资讯')}}</div>
+                <div class="content">
+                    <ul>
+                        @foreach($posts as $post)
+                        <li><a href="{{url('hengfeng/'.$post->id)}}">{{$post->title[app()->getLocale()]??''}}</a></li>
+                        @endforeach
+                    </ul>
+                    {{ $posts->links('vendor.pagination.tailwind') }}
+                </div>
+                <div style="width:30vw;right:0;top:0;position:absolute;z-index:-1">
+                    <img class="image" src="{{asset('/images/projects/header-09.png')}}" alt="" />
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -264,14 +270,14 @@
         function resizePage() {}
         $().ready(function() {
             // resizePage();
-            $("#menu .close").click(function(){
+            $("#menu .close").click(function() {
                 $("#menu").addClass("hidden");
                 $("#menuWrapper").addClass("hidden");
                 $("#nav").css({
                     opacity: 1
                 });
             });
-            $("#nav").click(function(){
+            $("#nav").click(function() {
                 $("#menu").removeClass("hidden");
                 $("#menuWrapper").removeClass("hidden");
                 $("#nav").css({

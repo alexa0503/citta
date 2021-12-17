@@ -284,16 +284,30 @@ a {
     overflow: auto;
     margin-right: 26vw;
 }
-.news .content ul,
+.news .content ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px 10px;
+}
 .news .content ul li {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 5px 0;
     line-height: 20px;
+}
+.news .content ul li a {
+    text-decoration: none;
+    color: #303030;
+    font-size: 16px;
+}
+.news .content ul li a:hover {
+    text-decoration: underline;
 }
 .image {
     display: block;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 .footer {
     text-align: center;
@@ -315,7 +329,7 @@ a {
     width: 60px;
     z-index: 2000;
     border-radius: 10px;
-    background-color: #225F76;
+    background-color: #225f76;
     color: #fff;
     font-size: 16px;
     line-height: 1.2;
@@ -325,10 +339,10 @@ a {
     justify-content: center;
     align-items: center;
 }
-.en-US .reserve  {
+.en-US .reserve {
     font-size: 12px;
 }
-.reserve  a {
+.reserve a {
     color: #fff;
     text-decoration: none;
 }
@@ -516,6 +530,14 @@ a {
 }
 .en-US .projects {
     line-height: 1.2;
+}
+.post {
+    font-size: 16px;
+    margin: 200px 100px 20px;
+    padding: 40px;
+    color: #303030;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
 }
 @media (max-width: 768px) {
     .fp-controlArrow.fp-next {
@@ -788,7 +810,7 @@ a {
     .page-contactus-0 {
         background-image: url(/images/pages/mobile/22.jpg);
     }
-    
+
     .projects .descr {
         position: absolute;
         left: 30px;
@@ -848,7 +870,7 @@ a {
     }
     .projects-descr p {
         margin: 10px 0;
-        padding: 0; 
+        padding: 0;
     }
     .projects-service h1 {
         font-size: 14px;
@@ -860,6 +882,26 @@ a {
     .projects-service ul li {
         margin: 0 0 0 0;
         padding: 0 0 0 7px;
+    }
+
+    .news .content {
+        margin-right: 0;
+    }
+    .news .content ul li a {
+        text-decoration: none;
+        color: #303030;
+        font-size: 12px;
+    }
+    .post {
+        font-size: 16px;
+        margin: 100px 10px 20px;
+        padding: 40px;
+        color: #303030;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+    }
+    .post img {
+        max-width: 80vw;
     }
 }
 @media (min-width: 769px) {

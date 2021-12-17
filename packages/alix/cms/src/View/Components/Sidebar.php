@@ -19,19 +19,19 @@ class Sidebar extends Component
         $this->current_route = preg_replace('/\.(create|index|edit)$/', '', \Route::currentRouteName());
         $this->menus = [
             [
-                'title' => '微信用户',
-                'route_name' => 'cms.users',
-                'id' => 'cms_users',
+                'title' => '文章管理',
+                'route_name' => 'cms.posts',
+                'id' => 'cms_posts',
                 'icon' => 'account',
-                'has_children' => false
-            ],
-            [
-                'title' => '中奖用户',
-                'route_name' => 'cms.winners',
-                'id' => 'cms_winners',
-                'icon' => 'format-list-bulleted',
                 'has_children' => true
             ],
+            // [
+            //     'title' => '中奖用户',
+            //     'route_name' => 'cms.winners',
+            //     'id' => 'cms_winners',
+            //     'icon' => 'format-list-bulleted',
+            //     'has_children' => true
+            // ],
             // [
             //     'title' => '设置',
             //     'route_name' => 'cms.settings',

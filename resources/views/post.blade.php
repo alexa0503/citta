@@ -8,7 +8,7 @@
     <meta name="360-site-verification" content="" />
     <meta property="google-site-verification" content="" />
     <meta charset="utf-8" />
-    <title>{{__("上海服务式公寓,日租|长租公寓,恒丰路月租式公寓品牌-臻逸")}}</title>
+    <title>{{__("上海市静安区恒丰路服务式公寓介绍-臻逸")}}</title>
     <meta name="keywords" content="" />
     <meta name="description" content="{{env('APP_NAME')}}" />
     <meta property="og:url" content="{{env('APP_URL')}}" />
@@ -35,29 +35,12 @@
 </head>
 
 <body>
-    <div id="container">
-        @foreach($pages as $key => $items)
-        <div class="section @class(['active'=>$key===0]) data-anchor="{{$key}}">
-            @foreach($items as $k => $item)
-            @if(count($items) > 1)
-            <div class="slide">
-            @endif
-                <div class="page {{"page-{$key}-{$k}"}}">
-                    @if(isset($item['title']))
-                    <div class="title xs-hidden"><img src="{{$item['title']['image']??''}}" alt="" /></div>
-                    <div class="title md-hidden"><img src="{{$item['title']['mobileImage']??''}}" alt="" /></div>
-                    @endif
-                    @if(isset($item['footer']))
-                    <div class="footer md-hidden"><img src="{{$item['footer']['mobileImage']??''}}" alt="" /></div>
-                    <div class="footer xs-hidden"><img src="{{$item['footer']['image']??''}}" alt="" /></div>
-                    @endif
-                </div>
-            @if(count($items) > 1)
-            </div>
-            @endif
-            @endforeach
+    <div id="container" class="{{app()->getLocale()}}">
+        <div class="post">
+            <h3>{{ $post['title'][app()->getLocale()]??''}}</h3>
+            <h5>{{$post['created_at']}}</h5>
+            <div style="padding-top: 20px;">{!! $post['body'][app()->getLocale()]??'' !!}</div>
         </div>
-        @endforeach
     </div>
     <div id="header">
         <div id="logo">
@@ -67,12 +50,8 @@
             <img src="{{asset('images/icon-menu.png')}}" alt="menu" />
         </div>
     </div>
-    @include('components.menu')
+    @include('components.menu',['page'=>'hengfeng'])
     <div id="menuWrapper" class="hidden"></div>
-    <div class="arrowBottom">
-        <img id="arrowDown" src="{{asset('images/icon-arrow-down.png')}}" alt="next" />
-        <img id="arrowUp" src="{{asset('images/icon-arrow-up.png')}}" alt="prev" class="hidden" />
-    </div>
     <div id="footer"><a href="https://beian.miit.gov.cn/" target="_blank">{{$record_number}}</a></div>
     <script>
         @if(env('APP_ENV') === 'production')
@@ -81,16 +60,17 @@
         }
         @endif
 
+        function resizePage() {}
         $().ready(function() {
-            $("#menu .close").click(function(){
-
+            // resizePage();
+            $("#menu .close").click(function() {
                 $("#menu").addClass("hidden");
                 $("#menuWrapper").addClass("hidden");
                 $("#nav").css({
                     opacity: 1
                 });
             });
-            $("#nav").click(function(){
+            $("#nav").click(function() {
                 $("#menu").removeClass("hidden");
                 $("#menuWrapper").removeClass("hidden");
                 $("#nav").css({
@@ -99,48 +79,14 @@
             });
 
             $('#menus li a').click(function() {
-                if($(this).text()!=="{{__('精彩项目')}}"){
-                    $("#menu").addClass("hidden");
-                    $("#menuWrapper").addClass("hidden");
-                    $("#nav").css({
-                        opacity: 1
-                    });
-                }
+                $("#menu").addClass("hidden");
+                $("#menuWrapper").addClass("hidden");
+                $("#nav").css({
+                    opacity: 1
+                });
             });
         });
 
-        new fullpage('#container', {
-            autoScrolling: true
-            , scrollHorizontally: true
-            , menu: "#menus"
-            , navigation: false
-            , navigationPosition: 'right'
-            , showActiveTooltip: false
-            , slidesNavigation: true
-            , slidesNavPosition: 'bottom'
-            , loopHorizontal: false
-            // , scrollingSpeed: 1000
-            // , easing: 'easeInQuart'
-            , easingcss3: 'linear'
-            // ,lazyLoading:true
-            , afterLoad: function(origin, destination, direction) {
-                if (destination.anchor == 'contactus') {
-                    $("#arrowDown").addClass("hidden");
-                    $("#arrowUp").removeClass("hidden");
-                } else {
-                    $("#arrowDown").removeClass("hidden");
-                    $("#arrowUp").addClass("hidden");
-                }
-            },
-            css3: true
-        , });
-
-        $("#arrowUp").click(function() {
-            fullpage_api.moveSectionUp();
-        });
-        $("#arrowDown").click(function() {
-            fullpage_api.moveSectionDown();
-        });
     </script>
 </body>
 

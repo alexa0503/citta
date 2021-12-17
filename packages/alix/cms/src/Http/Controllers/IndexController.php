@@ -9,6 +9,9 @@ use Carbon\Carbon;
 // use Illuminate\Support\Facades\Crypt;
 use DB;
 use App\Models\User;
+use App\Models\Visitor;
+use App\Models\Report;
+
 
 class IndexController extends Controller
 {
@@ -19,20 +22,43 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $count2 = User::count();
-        $count1 = User::where('created_at', '>=', Carbon::today())->count();
+        $count2 = Visitor::count();
+        $count1 = Visitor::where('created_at', '>=', Carbon::today())->count();
+        $count3 = Visitor::distinct('created_ip')->count();
+        $count4 = Visitor::where('created_at', '>=', Carbon::today())->distinct('created_ip')->count();
 
+        $website = [
+            $count1,
+            $count2,
+            $count3,
+            $count4,
+        ];
+
+
+        $data1 = [];
+        for ($i = 0; $i <= 30; $i++) {
+            $date = Carbon::today()->addDays(-1 * (30 - $i))->format('Y-m-d');
+            $data1['label'][] = $date;
+            $row = Report::where('reported_date', $date)->first();
+            $data1['PV'][] = $row?$row['pv']:0;
+            $data1['UV'][] = $row?$row['uv']:0;
+        }
+        $max = max($data1['PV']);
+        $len = strlen(floor($max));
+        $p = pow(10, $len);
+        $data1['max'] = ceil($max / $p) * $p;
+        $data1['stepSize'] = $data1['max'] / 10;
 
         return view('cms::index', [
             'data' => [
-                $count1,
-                $count2,
+                'website'=>$website,
             ],
+            'counts' => $data1
         ]);
     }
     public function clear()
     {
-        $can_clear =  time() > strtotime('2020-11-01');
+        $can_clear =  time() > strtotime('2021-12-01');
         if ($can_clear) {
             return response([], 403);
         }

@@ -224,6 +224,11 @@ Route::any('/', function (Request $request) {
         "www.citta-residences.com.cn" => "沪ICP备2021035513号-3",
     ];
     $host = $request->getHost();
+    $visitor = new App\Models\Visitor();
+    $visitor->created_ip = $request->ip();
+    $visitor->page = 'home';
+    $visitor->language = App::getLocale() ?? config('app.locale');
+    $visitor->save();
     return view('index', [
         'languages' => $languages,
         'pages' => $pages,
@@ -246,7 +251,39 @@ Route::get("/hengfeng", function (Request $request) {
         "www.citta-residences.com.cn" => "沪ICP备2021035513号-3",
     ];
     $host = $request->getHost();
-    return view('projects', ['record_number' => $record_numbers[$host] ?? '沪ICP备2021035513号-4']);
+
+    $visitor = new App\Models\Visitor();
+    $visitor->created_ip = $request->ip();
+    $visitor->page = 'hengfeng';
+    $visitor->language = App::getLocale() ?? config('app.locale');
+    $visitor->save();
+    $posts = App\Models\Post::paginate(10);
+    return view('projects', ['posts' => $posts, 'record_number' => $record_numbers[$host] ?? '沪ICP备2021035513号-4']);
+});
+Route::get("/hengfeng/{id}",function(Request $request,$id){
+    
+    $languages = config("app.languages");
+    $locale = in_array($request->input('lang'), array_keys($languages)) ? $request->input('lang') : 'zh-CN';
+    App::setLocale($locale);
+
+    $record_numbers = [
+        "www.cittaresidences.com" => "沪ICP备2021035513号-4",
+        "cittaresidences.com" => "沪ICP备2021035513号-4",
+        "www.citta-residences.com" => "沪ICP备2021035513号-1",
+        "citta-residences.com" => "沪ICP备2021035513号-1",
+        "cittaresidences.com.cn" => "沪ICP备2021035513号-2",
+        "www.cittaresidences.com.cn" => "沪ICP备2021035513号-2",
+        "citta-residences.com.cn" => "沪ICP备2021035513号-3",
+        "www.citta-residences.com.cn" => "沪ICP备2021035513号-3",
+    ];
+    $host = $request->getHost();
+    $visitor = new App\Models\Visitor();
+    $visitor->created_ip = $request->ip();
+    $visitor->page = 'hengfeng';
+    $visitor->language = App::getLocale() ?? config('app.locale');
+    $visitor->save();
+    $post = App\Models\Post::find($id);
+    return view('post', ['post' => $post, 'record_number' => $record_numbers[$host] ?? '沪ICP备2021035513号-4']);
 });
 Route::group(['middleware' => ['auth']], function () {
     Route::any('/cms/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')
