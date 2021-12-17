@@ -24,8 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('coupons:send')->everyMinute();
-        $schedule->command('data:generate')->everyMinute();
+        $schedule->command('report:create 1')->hourly();
     }
 
     /**
