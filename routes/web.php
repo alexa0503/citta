@@ -235,7 +235,7 @@ Route::any('/', function (Request $request) {
         'record_number' => $record_numbers[$host] ?? '沪ICP备2021035513号-4'
     ]);
 });
-Route::get("/hengfeng", function (Request $request) {
+Route::get("/projects", function (Request $request) {
     $languages = config("app.languages");
     $locale = in_array($request->input('lang'), array_keys($languages)) ? $request->input('lang') : 'zh-CN';
     App::setLocale($locale);
